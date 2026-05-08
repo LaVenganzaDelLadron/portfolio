@@ -14,6 +14,7 @@ export class NavbarComponent {
 
   navLinks = [
     { name: 'Home', path: '/', fragment: 'home' },
+    { name: 'Profile', path: '/', fragment: 'profile' },
     { name: 'Bug Bounty', path: '/', fragment: 'bug-bounty' },
     { name: 'Projects', path: '/', fragment: 'projects' },
     { name: 'Skills', path: '/', fragment: 'skills' }

@@ -9,10 +9,19 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
-  stats = [
-    { label: 'Years Experience', value: '5+' },
-    { label: 'Projects Completed', value: '40+' },
-    { label: 'Security Audits', value: '15+' },
-    { label: 'Open Source', value: '10+' }
+  roles = [
+    'Cyber Security Enthusiast',
+    'Security Researcher',
+    'Bug Bounty Hunter',
+    'Backend Developer',
+    'Android Developer'
+  ];
+
+  highlights = [
+    'Bug bounty research experience',
+    'Web security testing',
+    'Backend development skills',
+    'Android development experience',
+    'Focus on secure system design'
   ];
 }

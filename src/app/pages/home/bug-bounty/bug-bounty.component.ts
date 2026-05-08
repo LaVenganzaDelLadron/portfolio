@@ -11,6 +11,8 @@ interface BugBountyProgram {
   totalRewards: string;
   icon: string;
   focus: string;
+  description: string;
+  featured?: boolean;
 }
 
 @Component({
@@ -23,33 +25,39 @@ export class BugBountyComponent {
   programs: BugBountyProgram[] = [
     {
       id: 1,
-      name: 'Adastra Security',
+      name: 'Adastra',
       image: 'assets/images/bugbounty/adastra.png',
       severity: 'Critical',
       vulnsFound: 12,
       totalRewards: '$4,500',
       icon: 'fas fa-shield-halved',
-      focus: 'Access control and account takeover research'
+      focus: 'Access control and account takeover research',
+      description: 'Security research and vulnerability assessment',
+      featured: true
     },
     {
       id: 2,
-      name: 'JobPortal',
+      name: 'Job Portal',
       image: 'assets/images/bugbounty/jobportal.png',
       severity: 'High',
       vulnsFound: 8,
       totalRewards: '$2,800',
       icon: 'fas fa-user-lock',
-      focus: 'Authentication and business logic testing'
+      focus: 'Authentication and business logic testing',
+      description: 'Security research and vulnerability assessment',
+      featured: true
     },
     {
       id: 3,
-      name: 'JPConnect',
+      name: 'JP Connect',
       image: 'assets/images/bugbounty/jpconnect.png',
       severity: 'Critical',
       vulnsFound: 15,
       totalRewards: '$5,200',
       icon: 'fas fa-bug',
-      focus: 'Critical web vulnerability disclosure'
+      focus: 'Critical web vulnerability disclosure',
+      description: 'Security research and vulnerability assessment',
+      featured: true
     },
     {
       id: 4,
@@ -59,7 +67,8 @@ export class BugBountyComponent {
       vulnsFound: 6,
       totalRewards: '$1,900',
       icon: 'fas fa-network-wired',
-      focus: 'API security and sensitive data exposure'
+      focus: 'API security and sensitive data exposure',
+      description: 'Security research and vulnerability assessment'
     }
   ];
 
