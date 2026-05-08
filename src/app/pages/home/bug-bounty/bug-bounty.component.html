@@ -1,0 +1,63 @@
+<section class="bug-bounty section-padding">
+  <div class="container">
+    <app-section-title number="05" title="Bug Bounty Programs"></app-section-title>
+
+    <div class="bug-bounty-intro">
+      <p>
+        I actively participate in bug bounty programs to help organizations identify and fix
+        security vulnerabilities. Here are some of my recent programs and findings.
+      </p>
+    </div>
+
+    <div class="stats-overview">
+      <div class="stat-item">
+        <div class="stat-number text-gradient">{{ getTotalVulns() }}</div>
+        <div class="stat-name">Vulnerabilities Found</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number text-gradient">{{ programs.length }}</div>
+        <div class="stat-name">Programs Participated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number text-gradient">{{ getTotalRewards() }}</div>
+        <div class="stat-name">Total Rewards Earned</div>
+      </div>
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card" *ngFor="let program of programs">
+        <div class="card-header">
+          <div class="program-image">
+            <img [src]="program.image" [alt]="program.name" loading="lazy" />
+            <div class="card-overlay"></div>
+          </div>
+          <span class="severity-badge" [class]="getSeverityClass(program.severity)">
+            {{ program.severity }}
+          </span>
+        </div>
+
+        <div class="card-body">
+          <h3 class="program-name">{{ program.name }}</h3>
+
+          <div class="program-stats">
+            <div class="stat">
+              <span class="label">Vulnerabilities</span>
+              <span class="value">{{ program.vulnsFound }}</span>
+            </div>
+            <div class="stat">
+              <span class="label">Rewards</span>
+              <span class="value">{{ program.totalRewards }}</span>
+            </div>
+          </div>
+
+          <button class="btn-view-details">View Report</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bounty-cta">
+      <p>Interested in running a security assessment? I'm available for consultations.</p>
+      <button class="btn-neon">Schedule Consultation</button>
+    </div>
+  </div>
+</section>
