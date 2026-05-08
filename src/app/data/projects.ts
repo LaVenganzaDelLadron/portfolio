@@ -3,7 +3,7 @@ import { Project } from '../core/models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'CodeGo - Swissmiss Army Knife',
+    title: 'CodeGo - Swiss Army Knife',
     description: 'CODEGO is a Python-based tool for authorized network testing and remote system management in controlled environments.',
     image: 'assets/images/project/codego.png',
     technologies: ['Python',],
