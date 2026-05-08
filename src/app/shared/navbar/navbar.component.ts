@@ -14,12 +14,9 @@ export class NavbarComponent {
 
   navLinks = [
     { name: 'Home', path: '/', fragment: 'home' },
-    { name: 'About', path: '/', fragment: 'about' },
-    { name: 'Skills', path: '/', fragment: 'skills' },
-    { name: 'Projects', path: '/', fragment: 'projects' },
     { name: 'Bug Bounty', path: '/', fragment: 'bug-bounty' },
-    { name: 'Experience', path: '/', fragment: 'experience' },
-    { name: 'Contact', path: '/', fragment: 'contact' }
+    { name: 'Projects', path: '/', fragment: 'projects' },
+    { name: 'Skills', path: '/', fragment: 'skills' }
   ];
 
   @HostListener('window:scroll', [])

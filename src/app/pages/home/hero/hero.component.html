@@ -1,56 +1,26 @@
-<section class="min-h-screen flex items-center relative overflow-hidden pt-[120px] pb-[60px] lg:py-[100px]" @fadeInUp>
-  <div class="absolute top-0 left-0 w-full h-full -z-10">
-    <div class="absolute top-[-10%] right-[-5%] w-[clamp(300px,40vw,600px)] h-[clamp(300px,40vw,600px)] rounded-full bg-primary blur-[120px] opacity-10"></div>
-    <div class="absolute bottom-[5%] left-[-10%] w-[clamp(300px,40vw,600px)] h-[clamp(300px,40vw,600px)] rounded-full bg-accent blur-[120px] opacity-10"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[length:50px_50px] [mask-image:radial-gradient(circle_at_center,black,transparent_80%)] opacity-15"></div>
-  </div>
-
-  <div class="container grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
-    <div class="relative z-10">
-      <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-primary/5 border border-primary/15 rounded-full text-primary text-[0.85rem] font-semibold tracking-wider mb-8 backdrop-blur-sm">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
-        </span>
-        Available for new opportunities
-      </div>
-
-      <h1 class="text-[clamp(2.5rem,7vw,4.5rem)] font-extrabold leading-[1.1] mb-6 tracking-tight">
-        Securing the <span class="text-gradient">Digital</span><br>
-        Frontier with Code.
+<section id="home" class="flex min-h-screen items-center border-b border-white/5 pt-28 pb-20" @fadeInUp>
+  <div class="container">
+    <div class="mx-auto max-w-4xl text-center">
+      <h1 class="text-[clamp(3.5rem,14vw,8rem)] font-extrabold leading-none tracking-tight">
+        Argus
       </h1>
 
-      <p class="text-[clamp(1.1rem,2.5vw,1.5rem)] text-text-secondary mb-8 font-mono min-h-[1.5em]">
-        <span class="text-primary">> </span>{{ displayText }}<span class="inline-block w-[2px] h-[1em] bg-primary ml-1 align-middle animate-pulse shadow-[0_0_8px_#00ff99]"></span>
+      <div class="mx-auto mt-8 min-h-[2.6rem] max-w-3xl font-mono text-[clamp(1rem,3vw,1.35rem)] text-primary">
+        <span>{{ displayText }}</span>
+        <span class="ml-1 inline-block h-[1.1em] w-[2px] translate-y-1 bg-primary animate-pulse"></span>
+      </div>
+
+      <p class="mx-auto mt-6 max-w-xl text-base leading-8 text-text-secondary sm:text-lg">
+        Building secure systems and finding vulnerabilities.
       </p>
 
-      <p class="max-w-[580px] text-lg lg:text-[1.15rem] text-text-secondary mb-12 leading-relaxed">
-        Expert in building secure, high-performance applications with an
-        engineering-first mindset. From cybersecurity research to scalable full-stack development.
-      </p>
-
-      <div class="flex flex-wrap gap-6 mb-14">
-        <button class="px-10 py-4 bg-primary text-background rounded-md font-bold text-base tracking-wider transition-all duration-300 shadow-[0_4px_15px_rgba(0,255,153,0.2)] hover:-translate-y-1 hover:bg-[#21ffad] hover:shadow-[0_8px_25px_rgba(0,255,153,0.4)]">
+      <div class="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row sm:justify-center">
+        <a href="#projects" class="inline-flex w-full items-center justify-center rounded-[20px] bg-primary px-7 py-4 text-sm font-bold uppercase tracking-[1.4px] text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#21ffad] sm:w-auto">
           View Projects
-        </button>
-        <button class="px-10 py-4 border border-white/20 text-text-primary rounded-md font-semibold text-base transition-all duration-300 backdrop-blur-sm hover:bg-white/5 hover:border-white/50 hover:-translate-y-1">
+        </a>
+        <a href="mailto:hello@argus.dev" class="inline-flex w-full items-center justify-center rounded-[20px] border border-white/10 bg-white/[0.03] px-7 py-4 text-sm font-semibold uppercase tracking-[1.4px] text-text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/5 sm:w-auto">
           Contact Me
-        </button>
-      </div>
-
-      <div class="flex gap-8 text-2xl text-text-secondary">
-        <a href="https://github.com" target="_blank" aria-label="GitHub" class="transition-all duration-300 hover:text-primary hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(0,255,153,0.5)]"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="transition-all duration-300 hover:text-primary hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(0,255,153,0.5)]"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="transition-all duration-300 hover:text-primary hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(0,255,153,0.5)]"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-
-    <div class="flex justify-center items-center relative z-10">
-      <div class="relative w-full max-w-[450px] aspect-square group">
-        <div class="absolute inset-[-15px] border-2 border-primary/10 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-[morph_15s_linear_infinite] -z-10 group-hover:border-primary/20"></div>
-        <div class="absolute inset-[-30px] border border-secondary/10 rounded-[70%_30%_30%_70%_/_70%_70%_30%_30%] animate-[morph_20s_linear_infinite_reverse] -z-20 group-hover:border-secondary/20"></div>
-        <img src="assets/images/profile/profile.jpeg" alt="Argus Profile"
-             class="w-full h-full object-cover rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-[morph_15s_linear_infinite] border-2 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 group-hover:border-primary/30 group-hover:scale-[1.02]">
+        </a>
       </div>
     </div>
   </div>

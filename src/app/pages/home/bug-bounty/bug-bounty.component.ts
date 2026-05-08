@@ -9,6 +9,8 @@ interface BugBountyProgram {
   severity: string;
   vulnsFound: number;
   totalRewards: string;
+  icon: string;
+  focus: string;
 }
 
 @Component({
@@ -25,7 +27,9 @@ export class BugBountyComponent {
       image: 'assets/images/bugbounty/adastra.png',
       severity: 'Critical',
       vulnsFound: 12,
-      totalRewards: '$4,500'
+      totalRewards: '$4,500',
+      icon: 'fas fa-shield-halved',
+      focus: 'Access control and account takeover research'
     },
     {
       id: 2,
@@ -33,7 +37,9 @@ export class BugBountyComponent {
       image: 'assets/images/bugbounty/jobportal.png',
       severity: 'High',
       vulnsFound: 8,
-      totalRewards: '$2,800'
+      totalRewards: '$2,800',
+      icon: 'fas fa-user-lock',
+      focus: 'Authentication and business logic testing'
     },
     {
       id: 3,
@@ -41,7 +47,9 @@ export class BugBountyComponent {
       image: 'assets/images/bugbounty/jpconnect.png',
       severity: 'Critical',
       vulnsFound: 15,
-      totalRewards: '$5,200'
+      totalRewards: '$5,200',
+      icon: 'fas fa-bug',
+      focus: 'Critical web vulnerability disclosure'
     },
     {
       id: 4,
@@ -49,12 +57,20 @@ export class BugBountyComponent {
       image: 'assets/images/bugbounty/wemis.png',
       severity: 'High',
       vulnsFound: 6,
-      totalRewards: '$1,900'
+      totalRewards: '$1,900',
+      icon: 'fas fa-network-wired',
+      focus: 'API security and sensitive data exposure'
     }
   ];
 
+  get featuredPrograms(): BugBountyProgram[] {
+    return this.programs
+      .filter((program) => program.severity === 'Critical' || program.severity === 'High')
+      .slice(0, 3);
+  }
+
   getTotalRewards(): string {
-    const total = this.programs.reduce((sum, prog) => {
+    const total = this.featuredPrograms.reduce((sum, prog) => {
       const amount = parseInt(prog.totalRewards.replace(/[$,]/g, ''));
       return sum + amount;
     }, 0);
@@ -62,7 +78,7 @@ export class BugBountyComponent {
   }
 
   getTotalVulns(): number {
-    return this.programs.reduce((sum, prog) => sum + prog.vulnsFound, 0);
+    return this.featuredPrograms.reduce((sum, prog) => sum + prog.vulnsFound, 0);
   }
 
   getSeverityClass(severity: string): string {

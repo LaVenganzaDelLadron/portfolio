@@ -6,15 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="mb-14 relative">
-      <div class="text-primary text-[0.85rem] tracking-[2px] mb-3 flex items-center gap-2 opacity-80 font-mono">
-        <span class="font-extrabold">{{ number }}</span> // SYSTEM_READY
+    <div class="mb-10 md:mb-12">
+      <div class="mb-3 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[2px] text-primary/80">
+        <span>{{ number }}</span>
+        <span class="h-px w-8 bg-primary/30"></span>
       </div>
-      <h2 class="text-[clamp(2rem,5vw,2.75rem)] font-extrabold text-text-primary tracking-tight flex items-baseline gap-1">
+      <h2 class="max-w-3xl text-[clamp(2rem,5vw,3rem)] font-extrabold tracking-tight text-text-primary">
         {{ title }}
-        <span class="text-primary text-5xl leading-none">.</span>
       </h2>
-      <div class="h-1 w-[60px] bg-gradient-to-r from-primary to-transparent mt-4 rounded-full"></div>
     </div>
   `,
   styles: [`

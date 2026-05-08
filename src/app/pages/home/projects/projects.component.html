@@ -1,48 +1,49 @@
-<section class="section-padding" id="projects">
+<section class="section-padding border-b border-white/5" id="projects">
   <div class="container">
-    <app-section-title number="03" title="Featured Work"></app-section-title>
-
-    <div class="flex flex-col gap-24 lg:gap-40">
-      <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-0 group"
-           *ngFor="let project of projects; let i = index"
-           [ngClass]="{'flex-row-reverse': i % 2 !== 0}">
-
-        <div class="z-10 relative lg:row-start-1"
-             [ngClass]="i % 2 === 0 ? 'lg:col-start-1 lg:col-end-7' : 'lg:col-start-7 lg:col-end-13 lg:text-right'">
-          <p class="text-primary font-mono text-[0.85rem] mb-2 uppercase tracking-[2px]">Featured Project</p>
-          <h3 class="text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold mb-6 text-text-primary tracking-tight">{{ project.title }}</h3>
-
-          <div class="bg-surface/95 backdrop-blur-md p-7 text-text-secondary rounded-xl text-[1.05rem] leading-relaxed mb-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)] border border-white/5 transition-all duration-500 hover:border-primary/20 hover:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.6)] lg:relative lg:w-[110%] group-hover:z-20"
-               [ngClass]="i % 2 !== 0 ? 'lg:ml-[-10%]' : ''">
-            <p>{{ project.description }}</p>
-          </div>
-
-          <ul class="flex flex-wrap gap-x-5 gap-y-3 mb-8 font-mono text-[0.85rem] text-text-primary/70"
-              [ngClass]="i % 2 !== 0 ? 'lg:justify-end' : ''">
-            <li *ngFor="let tech of project.technologies" class="transition-colors hover:text-primary">{{ tech }}</li>
-          </ul>
-
-          <div class="flex gap-6 text-[1.4rem] text-text-primary"
-               [ngClass]="i % 2 !== 0 ? 'lg:justify-end' : ''">
-            <a [href]="project.githubUrl" target="_blank" class="transition-all duration-300 hover:text-primary hover:-translate-y-1"><i class="fab fa-github"></i></a>
-            <a [href]="project.liveUrl" target="_blank" class="transition-all duration-300 hover:text-primary hover:-translate-y-1"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-
-        <div class="relative z-0 lg:row-start-1"
-             [ngClass]="i % 2 === 0 ? 'lg:col-start-6 lg:col-end-13' : 'lg:col-start-1 lg:col-end-8'">
-          <a [href]="project.liveUrl" target="_blank" class="block group/img">
-            <div class="relative rounded-xl overflow-hidden aspect-[16/10] shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)] bg-primary after:content-[''] after:absolute after:inset-0 after:bg-background after:opacity-40 after:transition-all after:duration-500 group-hover/img:after:opacity-0">
-              <img [src]="project.image" [alt]="project.title"
-                   class="w-full h-full object-cover grayscale contrast-[1.1] brightness-[0.8] mix-blend-multiply transition-all duration-700 ease-in-out group-hover/img:grayscale-0 group-hover/img:contrast-100 group-hover/img:brightness-100 group-hover/img:mix-blend-normal group-hover/img:scale-105">
-            </div>
-          </a>
-        </div>
-      </div>
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <app-section-title number="02" title="Selected Projects"></app-section-title>
+      <button class="mb-10 inline-flex w-full items-center justify-center rounded-[20px] border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5 sm:w-auto">
+        View All Projects
+      </button>
     </div>
 
-    <div class="text-center mt-32">
-      <button class="btn-outline px-12 text-base tracking-widest uppercase">View Full Archive</button>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <article class="group flex min-h-full flex-col overflow-hidden rounded-[20px] border border-white/5 bg-surface/45 shadow-[0_24px_70px_-48px_rgba(0,0,0,0.9)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-primary/30 hover:shadow-[0_24px_80px_-44px_rgba(0,255,153,0.28)]"
+               *ngFor="let project of featuredProjects">
+        <a [href]="project.liveUrl" target="_blank" rel="noopener" class="block overflow-hidden">
+          <img [src]="project.image" [alt]="project.title"
+               class="aspect-[16/10] w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-100">
+        </a>
+
+        <div class="flex grow flex-col p-6 md:p-7">
+          <div class="mb-4 flex items-start justify-between gap-4">
+            <h3 class="text-2xl font-bold tracking-tight text-text-primary">{{ project.title }}</h3>
+            <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[1.4px] text-text-secondary">{{ project.category }}</span>
+          </div>
+
+          <p class="mb-6 line-clamp-2 leading-7 text-text-secondary">{{ project.description }}</p>
+
+          <div class="mb-8 flex flex-wrap gap-2">
+            <span *ngFor="let tech of project.technologies.slice(0, 5)"
+                  class="rounded-full border border-white/10 bg-background/40 px-3 py-1.5 font-mono text-xs text-text-secondary">
+              {{ tech }}
+            </span>
+          </div>
+
+          <div class="mt-auto grid grid-cols-2 gap-3">
+            <a [href]="project.githubUrl" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 rounded-[20px] border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-text-primary transition duration-300 hover:border-primary/40 hover:bg-primary/5 hover:text-primary">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a [href]="project.liveUrl" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 rounded-[20px] bg-primary px-4 py-3 text-sm font-bold text-background transition duration-300 hover:bg-[#21ffad]">
+              <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+              Demo
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>

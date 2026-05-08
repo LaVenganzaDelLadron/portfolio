@@ -12,4 +12,8 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
 })
 export class ProjectsComponent {
   projects: Project[] = PROJECTS;
+
+  get featuredProjects(): Project[] {
+    return this.projects.slice(0, 4);
+  }
 }
