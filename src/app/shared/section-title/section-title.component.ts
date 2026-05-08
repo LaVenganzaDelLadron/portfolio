@@ -6,16 +6,20 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="section-title-container">
-      <div class="eyebrow mono"><span class="number">{{ number }}</span> // SYSTEM_READY</div>
-      <h2 class="title">
+    <div class="mb-14 relative">
+      <div class="text-primary text-[0.85rem] tracking-[2px] mb-3 flex items-center gap-2 opacity-80 font-mono">
+        <span class="font-extrabold">{{ number }}</span> // SYSTEM_READY
+      </div>
+      <h2 class="text-[clamp(2rem,5vw,2.75rem)] font-extrabold text-textPrimary tracking-tight flex items-baseline gap-1">
         {{ title }}
-        <span class="dot">.</span>
+        <span class="text-primary text-5xl leading-none">.</span>
       </h2>
-      <div class="title-line"></div>
+      <div class="h-1 w-[60px] bg-gradient-to-r from-primary to-transparent mt-4 rounded-full"></div>
     </div>
   `,
-  styleUrls: ['./section-title.component.scss']
+  styles: [`
+    :host { display: block; }
+  `]
 })
 export class SectionTitleComponent {
   @Input() number = '';

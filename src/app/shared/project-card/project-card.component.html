@@ -1,26 +1,33 @@
-<article class="card" [attr.aria-label]="project().title">
-  <div class="media">
-    <img [src]="project().image" [alt]="project().title" loading="lazy" />
-    <div class="overlay" aria-hidden="true"></div>
+<article class="bg-surface border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 group hover:-translate-y-2 hover:border-primary/20 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.5)]" [attr.aria-label]="project().title">
+  <div class="relative aspect-video overflow-hidden">
+    <img [src]="project().image" [alt]="project().title" loading="lazy"
+         class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110" />
+    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-60 transition-all duration-500 group-hover:opacity-0" aria-hidden="true"></div>
   </div>
 
-  <div class="body">
-    <div class="row">
-      <h3>{{ project().title }}</h3>
-      <span class="badge">{{ project().category }}</span>
+  <div class="p-6">
+    <div class="flex justify-between items-start gap-4 mb-4">
+      <h3 class="text-xl font-bold text-textPrimary group-hover:text-primary transition-colors">{{ project().title }}</h3>
+      <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[0.65rem] font-bold uppercase tracking-wider text-textSecondary">{{ project().category }}</span>
     </div>
 
-    <p class="desc">{{ project().description }}</p>
+    <p class="text-textSecondary text-sm leading-relaxed mb-6 line-clamp-3">{{ project().description }}</p>
 
-    <div class="tech">
+    <div class="flex flex-wrap gap-2 mb-8">
       @for (tech of project().technologies; track tech) {
-        <span class="tag">{{ tech }}</span>
+        <span class="px-3 py-1 bg-background/50 border border-white/5 rounded-md text-[0.7rem] text-primary/70 font-mono">{{ tech }}</span>
       }
     </div>
 
-    <div class="actions">
-      <a class="link" [href]="project().liveUrl" target="_blank">Live Demo</a>
-      <a class="link" [href]="project().githubUrl" target="_blank" rel="noopener">GitHub</a>
+    <div class="flex justify-between items-center pt-6 border-t border-white/5">
+      <a class="text-sm font-bold text-primary uppercase tracking-widest flex items-center gap-2 transition-all hover:gap-3 hover:brightness-110"
+         [href]="project().liveUrl" target="_blank">
+        Live Demo <i class="fas fa-external-link-alt text-[0.7rem]"></i>
+      </a>
+      <a class="text-textSecondary text-lg transition-all hover:text-textPrimary hover:scale-110"
+         [href]="project().githubUrl" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 </article>

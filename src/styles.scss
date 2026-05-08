@@ -1,2 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'styles/global';
+@import "tailwindcss";
+
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@layer components {
+  .section-padding {
+    @apply py-20;
+  }
+
+  .container {
+    @apply w-full max-w-[1300px] mx-auto px-6;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #00ff99, #00d9ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply inline-block;
+  }
+
+  .bg-glass {
+    @apply bg-surface/70 backdrop-blur-xl border border-white/5;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-background font-bold rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,255,153,0.4)];
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-white/20 text-textPrimary font-semibold rounded-md transition-all duration-300 hover:bg-white/5 hover:border-white/50 hover:-translate-y-1;
+  }
+}

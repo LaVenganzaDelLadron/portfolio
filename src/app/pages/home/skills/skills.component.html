@@ -1,24 +1,29 @@
-<section class="skills section-padding" id="skills">
+<section class="section-padding" id="skills">
   <div class="container">
     <app-section-title number="02" title="Technical Arsenal"></app-section-title>
 
-    <div class="skills-grid" [@staggerFadeIn]="skillCategories.length">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6" [@staggerFadeIn]="skillCategories.length">
       @for (category of skillCategories; track category.title) {
-        <div class="skill-card">
-          <div class="card-header">
-            <div class="icon-wrapper">
+        <div class="group relative bg-surface/40 border border-white/5 rounded-2xl p-8 overflow-hidden transition-all duration-500 backdrop-blur-md flex flex-col hover:bg-surface/70 hover:border-primary/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)]">
+          <div class="flex items-center gap-5 mb-8 relative z-10">
+            <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-[1.25rem] text-textSecondary transition-all duration-500 group-hover:bg-primary/10 group-hover:text-primary group-hover:scale-110 group-hover:rotate-[5deg] group-hover:shadow-[0_0_20px_rgba(0,255,153,0.2)]">
               <i [class]="category.icon"></i>
             </div>
-            <h3 class="category-title">{{ category.title }}</h3>
+            <h3 class="text-[1.15rem] font-bold text-textPrimary tracking-tight">{{ category.title }}</h3>
           </div>
-          <div class="skills-list">
+
+          <div class="flex flex-wrap gap-3 relative z-10">
             @if (isStringArray(category.skills)) {
               @for (skill of category.skills; track skill) {
-                <span class="skill-badge">{{ skill }}</span>
+                <span class="px-4 py-2 bg-background/40 border border-white/10 rounded-lg text-[0.85rem] text-textSecondary font-medium transition-all duration-300 backdrop-blur-sm hover:text-primary hover:border-primary hover:-translate-y-0.5 group-hover:border-primary/20 group-hover:bg-primary/5">
+                  {{ skill }}
+                </span>
               }
             }
           </div>
-          <div class="card-bg-effect"></div>
+
+          <!-- Card Background Effect -->
+          <div class="absolute -top-[20%] -right-[20%] w-[150px] h-[150px] bg-[radial-gradient(circle,rgba(0,255,153,0.08)_0%,transparent_70%)] opacity-0 transition-all duration-500 pointer-events-none group-hover:opacity-100 group-hover:scale-125"></div>
         </div>
       }
     </div>
