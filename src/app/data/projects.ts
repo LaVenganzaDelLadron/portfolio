@@ -3,20 +3,20 @@ import { Project } from '../core/models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'CodeGo - AI Code Review Platform',
+    title: 'CodeGo - Swissmiss Army Knife',
     description: 'Intelligent code review and analysis platform powered by machine learning. Integrates with GitHub/GitLab to provide real-time security and quality insights.',
     image: 'assets/images/project/codego.png',
-    technologies: ['Angular', 'Node.js', 'Python', 'PostgreSQL', 'TensorFlow', 'GitHub API'],
+    technologies: ['Python',],
     githubUrl: 'https://github.com/argus/codego',
     liveUrl: 'https://codego.io',
-    category: 'web'
+    category: 'Tooling'
   },
   {
     id: 2,
-    title: 'Hades - Penetration Testing Suite',
+    title: 'Hades - Malware Analyzer',
     description: 'Comprehensive penetration testing framework with automated reconnaissance, vulnerability scanning, and exploitation tools for authorized security assessments.',
     image: 'assets/images/project/hades.jpeg',
-    technologies: ['Python', 'Go', 'Metasploit', 'Docker', 'Kubernetes', 'PostgreSQL'],
+    technologies: ['Python', 'Kotlin', 'Firebase', 'VirusTotal', 'HybridAnalysis', 'URLScan'],
     githubUrl: 'https://github.com/argus/hades',
     liveUrl: 'https://hades.security',
     category: 'security'

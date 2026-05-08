@@ -23,15 +23,16 @@ interface BugBountyProgram {
 })
 export class BugBountyComponent {
   programs: BugBountyProgram[] = [
+
     {
       id: 1,
-      name: 'Adastra',
-      image: 'assets/images/bugbounty/adastra.png',
-      severity: 'Critical',
+      name: 'WEMIS',
+      image: 'assets/images/bugbounty/wemis.png',
+      severity: 'High',
       vulnsFound: 12,
-      totalRewards: '$4,500',
-      icon: 'fas fa-shield-halved',
-      focus: 'Access control and account takeover research',
+      totalRewards: '$1,900',
+      icon: 'fas fa-network-wired',
+      focus: 'API security and sensitive data exposure',
       description: 'Security research and vulnerability assessment',
       featured: true
     },
@@ -40,7 +41,7 @@ export class BugBountyComponent {
       name: 'Job Portal',
       image: 'assets/images/bugbounty/jobportal.png',
       severity: 'High',
-      vulnsFound: 8,
+      vulnsFound: 22,
       totalRewards: '$2,800',
       icon: 'fas fa-user-lock',
       focus: 'Authentication and business logic testing',
@@ -49,27 +50,28 @@ export class BugBountyComponent {
     },
     {
       id: 3,
+      name: 'Adastra',
+      image: 'assets/images/bugbounty/adastra.png',
+      severity: 'Critical',
+      vulnsFound: 3,
+      totalRewards: '$4,500',
+      icon: 'fas fa-shield-halved',
+      focus: 'Access control and account takeover research',
+      description: 'Security research and vulnerability assessment',
+      featured: true
+    },
+    {
+      id: 4,
       name: 'JP Connect',
       image: 'assets/images/bugbounty/jpconnect.png',
       severity: 'Critical',
-      vulnsFound: 15,
+      vulnsFound: 12,
       totalRewards: '$5,200',
       icon: 'fas fa-bug',
       focus: 'Critical web vulnerability disclosure',
       description: 'Security research and vulnerability assessment',
       featured: true
     },
-    {
-      id: 4,
-      name: 'WEMIS',
-      image: 'assets/images/bugbounty/wemis.png',
-      severity: 'High',
-      vulnsFound: 6,
-      totalRewards: '$1,900',
-      icon: 'fas fa-network-wired',
-      focus: 'API security and sensitive data exposure',
-      description: 'Security research and vulnerability assessment'
-    }
   ];
 
   get featuredPrograms(): BugBountyProgram[] {
@@ -87,7 +89,7 @@ export class BugBountyComponent {
   }
 
   getTotalVulns(): number {
-    return this.featuredPrograms.reduce((sum, prog) => sum + prog.vulnsFound, 0);
+    return this.programs.reduce((sum, prog) => sum + prog.vulnsFound, 0);
   }
 
   getSeverityClass(severity: string): string {
