@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use 'sass:color';
+@use '../../../styles/mixins' as *;
 
 .not-found {
   height: 100vh;
@@ -16,10 +16,10 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: $color-neon-green;
+  color: #00ff99;
 }
 
 p {
-  color: $text-secondary;
+  color: #8b949e;
   margin-bottom: 2rem;
 }

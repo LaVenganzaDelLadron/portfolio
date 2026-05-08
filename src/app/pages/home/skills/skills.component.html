@@ -2,21 +2,25 @@
   <div class="container">
     <app-section-title number="02" title="Technical Arsenal"></app-section-title>
 
-    <div class="skills-grid">
-      <div class="skill-category" *ngFor="let cat of categories">
-        <h3 class="category-title">{{ formatCategory(cat) }}</h3>
-        <div class="skills-list">
-          <div class="skill-item" *ngFor="let skill of getSkillsByCategory(cat)">
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-percent">{{ skill.level }}%</span>
+    <div class="skills-grid" [@staggerFadeIn]="skillCategories.length">
+      @for (category of skillCategories; track category.title) {
+        <div class="skill-card">
+          <div class="card-header">
+            <div class="icon-wrapper">
+              <i [class]="category.icon"></i>
             </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
-            </div>
+            <h3 class="category-title">{{ category.title }}</h3>
           </div>
+          <div class="skills-list">
+            @if (isStringArray(category.skills)) {
+              @for (skill of category.skills; track skill) {
+                <span class="skill-badge">{{ skill }}</span>
+              }
+            }
+          </div>
+          <div class="card-bg-effect"></div>
         </div>
-      </div>
+      }
     </div>
   </div>
 </section>

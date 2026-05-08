@@ -1,26 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SKILLS } from '../../../data/skills';
-import { Skill } from '../../../core/models/skill.model';
+import { SKILL_CATEGORIES } from '../../../data/skills';
+import { SkillCategory } from '../../../core/models/skill.model';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
+
+import { staggerFadeInAnimation } from '../../../animations/fade.animation';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
+  animations: [staggerFadeInAnimation]
 })
 export class SkillsComponent {
-  skills: Skill[] = SKILLS;
+  skillCategories: SkillCategory[] = SKILL_CATEGORIES;
 
-  categories: ('frontend' | 'backend' | 'security' | 'tools')[] = ['frontend', 'backend', 'security', 'tools'];
-
-  getSkillsByCategory(category: string): Skill[] {
-    return this.skills.filter(s => s.category === category);
-  }
-
-  formatCategory(category: string): string {
-    return category.charAt(0).toUpperCase() + category.slice(1);
+  isStringArray(skills: any[]): skills is string[] {
+    return typeof skills[0] === 'string';
   }
 }

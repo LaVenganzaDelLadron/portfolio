@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { PROJECTS } from '../../data/projects';
-import { SKILLS } from '../../data/skills';
+import { SKILL_CATEGORIES } from '../../data/skills';
 import { CERTIFICATES } from '../../data/certificates';
 import { Project } from '../models/project.model';
-import { Skill } from '../models/skill.model';
+import { SkillCategory } from '../models/skill.model';
 import { Certificate } from '../models/certificate.model';
 
 @Injectable({
@@ -18,8 +18,8 @@ export class PortfolioDataService {
     return PROJECTS.find((p) => p.id.toString() === id.toString());
   }
 
-  getSkills(): Skill[] {
-    return SKILLS;
+  getSkills(): SkillCategory[] {
+    return SKILL_CATEGORIES;
   }
 
   getCertificates(): Certificate[] {
