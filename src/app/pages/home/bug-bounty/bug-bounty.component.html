@@ -2,7 +2,7 @@
   <div class="container">
     <app-section-title number="05" title="Bug Bounty Programs"></app-section-title>
 
-    <div class="max-w-[700px] mb-12 text-[1.15rem] leading-[1.8] text-textSecondary">
+    <div class="max-w-[700px] mb-12 text-[1.15rem] leading-[1.8] text-text-secondary">
       <p>
         I actively participate in bug bounty programs to help organizations identify and fix
         security vulnerabilities. Here are some of my recent programs and findings.
@@ -12,15 +12,15 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 p-10 bg-surface/40 border border-white/5 rounded-2xl backdrop-blur-md">
       <div class="text-center p-4 relative after:hidden md:after:block md:after:content-[''] md:after:absolute md:after:right-[-0.75rem] md:after:top-1/5 md:after:h-3/5 md:after:w-[1px] md:after:bg-white/10 last:after:hidden">
         <span class="text-gradient text-[3rem] font-extrabold block mb-2 tracking-tighter leading-none">{{ getTotalVulns() }}</span>
-        <span class="text-[0.85rem] text-textSecondary uppercase tracking-[1.5px] font-semibold">Vulnerabilities Found</span>
+        <span class="text-[0.85rem] text-text-secondary uppercase tracking-[1.5px] font-semibold">Vulnerabilities Found</span>
       </div>
       <div class="text-center p-4 relative after:hidden md:after:block md:after:content-[''] md:after:absolute md:after:right-[-0.75rem] md:after:top-1/5 md:after:h-3/5 md:after:w-[1px] md:after:bg-white/10 last:after:hidden">
         <span class="text-gradient text-[3rem] font-extrabold block mb-2 tracking-tighter leading-none">{{ programs.length }}</span>
-        <span class="text-[0.85rem] text-textSecondary uppercase tracking-[1.5px] font-semibold">Programs Participated</span>
+        <span class="text-[0.85rem] text-text-secondary uppercase tracking-[1.5px] font-semibold">Programs Participated</span>
       </div>
       <div class="text-center p-4 relative after:hidden md:after:block md:after:content-[''] md:after:absolute md:after:right-[-0.75rem] md:after:top-1/5 md:after:h-3/5 md:after:w-[1px] md:after:bg-white/10 last:after:hidden">
         <span class="text-gradient text-[3rem] font-extrabold block mb-2 tracking-tighter leading-none">{{ getTotalRewards() }}</span>
-        <span class="text-[0.85rem] text-textSecondary uppercase tracking-[1.5px] font-semibold">Total Rewards Earned</span>
+        <span class="text-[0.85rem] text-text-secondary uppercase tracking-[1.5px] font-semibold">Total Rewards Earned</span>
       </div>
     </div>
 
@@ -47,20 +47,20 @@
         </div>
 
         <div class="p-7 grow flex flex-col">
-          <h3 class="text-xl font-bold mb-5 text-textPrimary transition-colors group-hover:text-primary">{{ program.name }}</h3>
+          <h3 class="text-xl font-bold mb-5 text-text-primary transition-colors group-hover:text-primary">{{ program.name }}</h3>
 
           <div class="flex justify-between gap-6 mb-8 pt-5 border-t border-white/5">
             <div class="flex flex-col gap-1">
-              <span class="text-[0.7rem] text-textSecondary uppercase tracking-wider">Vulnerabilities</span>
+              <span class="text-[0.7rem] text-text-secondary uppercase tracking-wider">Vulnerabilities</span>
               <span class="text-[1.3rem] font-bold text-primary font-mono">{{ program.vulnsFound }}</span>
             </div>
             <div class="flex flex-col gap-1 text-right">
-              <span class="text-[0.7rem] text-textSecondary uppercase tracking-wider">Rewards</span>
+              <span class="text-[0.7rem] text-text-secondary uppercase tracking-wider">Rewards</span>
               <span class="text-[1.3rem] font-bold text-primary font-mono">{{ program.totalRewards }}</span>
             </div>
           </div>
 
-          <button class="mt-auto w-full py-3 bg-white/5 border border-white/10 rounded-lg text-textPrimary text-sm font-semibold transition-all duration-300 hover:bg-primary/10 hover:border-primary hover:text-primary">
+          <button class="mt-auto w-full py-3 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm font-semibold transition-all duration-300 hover:bg-primary/10 hover:border-primary hover:text-primary">
             View Report
           </button>
         </div>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="text-center py-16 px-8 bg-[radial-gradient(circle_at_center,rgba(0,255,153,0.05),transparent)] border border-white/5 rounded-[20px] backdrop-blur-md">
-      <p class="text-[1.25rem] mb-8 text-textPrimary max-w-[600px] mx-auto">Interested in running a security assessment? I'm available for consultations.</p>
+      <p class="text-[1.25rem] mb-8 text-text-primary max-w-[600px] mx-auto">Interested in running a security assessment? I'm available for consultations.</p>
       <button class="px-10 py-4 bg-primary text-background rounded-md font-bold text-base tracking-wider transition-all duration-300 shadow-[0_4px_15px_rgba(0,255,153,0.2)] hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,255,153,0.4)]">Schedule Consultation</button>
     </div>
   </div>

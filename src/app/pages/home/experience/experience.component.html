@@ -7,7 +7,7 @@
         <button
           *ngFor="let exp of experiences; let i = index"
           (click)="setActiveTab(i)"
-          class="px-6 py-4 text-left text-textSecondary font-mono text-[0.85rem] transition-all duration-300 whitespace-nowrap bg-transparent cursor-pointer tracking-wider md:w-full hover:bg-primary/5 hover:text-primary"
+          class="px-6 py-4 text-left text-text-secondary font-mono text-[0.85rem] transition-all duration-300 whitespace-nowrap bg-transparent cursor-pointer tracking-wider md:w-full hover:bg-primary/5 hover:text-primary"
           [ngClass]="activeTab === i ? 'text-primary bg-primary/5' : ''">
           {{ exp.company }}
         </button>
@@ -25,15 +25,15 @@
 
       <div class="grow pt-2">
         <div class="animate-fadeIn" *ngIf="experiences[activeTab]">
-          <h3 class="text-2xl font-bold mb-2 text-textPrimary">
+          <h3 class="text-2xl font-bold mb-2 text-text-primary">
             {{ experiences[activeTab].position }}
             <span class="text-primary font-semibold">@ {{ experiences[activeTab].company }}</span>
           </h3>
-          <p class="text-[0.85rem] text-textSecondary mb-8 tracking-widest uppercase font-mono">{{ experiences[activeTab].period }}</p>
+          <p class="text-[0.85rem] text-text-secondary mb-8 tracking-widest uppercase font-mono">{{ experiences[activeTab].period }}</p>
 
           <ul class="flex flex-col gap-5 mb-10">
             <li *ngFor="let desc of experiences[activeTab].description"
-                class="relative pl-7 text-textSecondary text-[1.05rem] leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-primary before:text-xl before:leading-none">
+                class="relative pl-7 text-text-secondary text-[1.05rem] leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-primary before:text-xl before:leading-none">
               {{ desc }}
             </li>
           </ul>

@@ -7,11 +7,11 @@
 
   <div class="p-6">
     <div class="flex justify-between items-start gap-4 mb-4">
-      <h3 class="text-xl font-bold text-textPrimary group-hover:text-primary transition-colors">{{ project().title }}</h3>
-      <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[0.65rem] font-bold uppercase tracking-wider text-textSecondary">{{ project().category }}</span>
+      <h3 class="text-xl font-bold text-text-primary group-hover:text-primary transition-colors">{{ project().title }}</h3>
+      <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[0.65rem] font-bold uppercase tracking-wider text-text-secondary">{{ project().category }}</span>
     </div>
 
-    <p class="text-textSecondary text-sm leading-relaxed mb-6 line-clamp-3">{{ project().description }}</p>
+    <p class="text-text-secondary text-sm leading-relaxed mb-6 line-clamp-3">{{ project().description }}</p>
 
     <div class="flex flex-wrap gap-2 mb-8">
       @for (tech of project().technologies; track tech) {
@@ -24,7 +24,7 @@
          [href]="project().liveUrl" target="_blank">
         Live Demo <i class="fas fa-external-link-alt text-[0.7rem]"></i>
       </a>
-      <a class="text-textSecondary text-lg transition-all hover:text-textPrimary hover:scale-110"
+      <a class="text-text-secondary text-lg transition-all hover:text-text-primary hover:scale-110"
          [href]="project().githubUrl" target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>

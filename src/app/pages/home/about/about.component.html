@@ -1,27 +1,29 @@
-<section class="about section-padding" id="about">
+<section class="section-padding" id="about">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-image">
-        <div class="image-wrapper">
-          <img src="assets/images/profile/profile.jpeg" alt="Argus Profile">
-          <div class="image-overlay"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-24 items-center">
+      <div class="relative max-w-[400px] mx-auto lg:mx-0 group">
+        <div class="relative z-10 overflow-hidden rounded-xl border border-white/10 transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <img src="assets/images/profile/profile.jpeg" alt="Argus Profile"
+               class="w-full aspect-[4/5] object-cover grayscale brightness-75 transition-all duration-500 group-hover:grayscale-0 group-hover:brightness-100">
+          <div class="absolute inset-0 bg-primary/15 mix-blend-multiply transition-all duration-500 group-hover:opacity-0 pointer-events-none"></div>
         </div>
+        <div class="absolute top-5 left-5 w-full h-full border-2 border-primary rounded-xl -z-10 transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2 group-hover:bg-primary/5"></div>
       </div>
 
-      <div class="about-info">
+      <div>
         <app-section-title number="01" title="About Me"></app-section-title>
-        <div class="about-text">
-          <p>
+        <div class="text-text-secondary text-lg leading-relaxed mb-14">
+          <p class="mb-6">
             Hello! I'm Argus, a developer and security researcher passionate about creating
             tools that make the internet a safer place. My journey in tech started with
             curiosity about how systems could be bypassed, which naturally evolved into
             a career focused on how to build them better.
           </p>
-          <p>
+          <p class="mb-6">
             Fast-forward to today, I've had the privilege of working with a
-            <span class="highlight">cybersecurity startup</span>, a
-            <span class="highlight">fintech giant</span>, and as a
-            <span class="highlight">freelance consultant</span>. My main focus these
+            <span class="text-primary font-semibold">cybersecurity startup</span>, a
+            <span class="text-primary font-semibold">fintech giant</span>, and as a
+            <span class="text-primary font-semibold">freelance consultant</span>. My main focus these
             days is building secure, high-performance web applications and
             architecting cloud infrastructure.
           </p>
@@ -31,10 +33,11 @@
           </p>
         </div>
 
-        <div class="stats-grid">
-          <div class="stat-card" *ngFor="let stat of stats">
-            <span class="stat-value text-gradient">{{ stat.value }}</span>
-            <span class="stat-label">{{ stat.label }}</span>
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-6">
+          <div class="bg-surface/50 p-6 rounded-xl border border-white/5 text-center transition-all duration-500 hover:bg-surface/80 hover:border-primary/20 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] group"
+               *ngFor="let stat of stats">
+            <span class="text-gradient text-[2.2rem] font-extrabold block mb-2 transition-transform duration-500 group-hover:scale-110">{{ stat.value }}</span>
+            <span class="text-[0.75rem] text-text-secondary uppercase tracking-[1.5px] font-semibold">{{ stat.label }}</span>
           </div>
         </div>
       </div>
