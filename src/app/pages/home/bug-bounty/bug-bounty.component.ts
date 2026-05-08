@@ -33,7 +33,7 @@ export class BugBountyComponent {
       totalRewards: '$1,900',
       icon: 'fas fa-network-wired',
       focus: 'API security and sensitive data exposure',
-      description: 'Security research and vulnerability assessment',
+      description: 'WEMIS API has critical IDOR and broken authentication allowing unauthorized data access, OTP exposure, and account modification.',
       featured: true
     },
     {
@@ -45,7 +45,7 @@ export class BugBountyComponent {
       totalRewards: '$2,800',
       icon: 'fas fa-user-lock',
       focus: 'Authentication and business logic testing',
-      description: 'Security research and vulnerability assessment',
+      description: 'Job Portal API has IDOR allowing unauthorized access to applicant data, exposing personal, academic, and sensitive profile information.',
       featured: true
     },
     {
@@ -57,7 +57,7 @@ export class BugBountyComponent {
       totalRewards: '$4,500',
       icon: 'fas fa-shield-halved',
       focus: 'Access control and account takeover research',
-      description: 'Security research and vulnerability assessment',
+      description: 'Conducted API security testing and NoSQL injection analysis on Ad Astra, identifying potential attack vectors and vulnerabilities.',
       featured: true
     },
     {
@@ -69,7 +69,7 @@ export class BugBountyComponent {
       totalRewards: '$5,200',
       icon: 'fas fa-bug',
       focus: 'Critical web vulnerability disclosure',
-      description: 'Security research and vulnerability assessment',
+      description: 'Performed security testing on JPConnect, focusing on API security and NoSQL injection vulnerabilities.',
       featured: true
     },
   ];
