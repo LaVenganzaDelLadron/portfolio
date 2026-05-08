@@ -3,6 +3,10 @@
 @use 'animations' as *;
 @use 'utilities' as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +16,7 @@
 body {
   background-color: $bg-primary;
   color: $text-primary;
-  font-family: $font-family;
+  font-family: $font-main;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -59,11 +63,11 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $bg-secondary;
+  background: $bg-surface;
   border-radius: 4px;
   border: 2px solid $bg-primary;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $color-neon-green;
+  background: $color-primary;
 }

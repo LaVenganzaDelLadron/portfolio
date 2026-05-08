@@ -1,9 +1,9 @@
 // Color Palette
 $bg-primary: #0d1117;
-$bg-secondary: #161b22;
-$color-neon-green: #00ff99;
-$color-cyan: #00d9ff;
-$color-purple: #7a5cff;
+$bg-surface: #161b22;
+$color-primary: #00ff99;
+$color-secondary: #00d9ff;
+$color-accent: #7a5cff;
 $text-primary: #f0f6fc;
 $text-secondary: #8b949e;
 $border-color: rgba(255, 255, 255, 0.08);
@@ -11,15 +11,16 @@ $border-color: rgba(255, 255, 255, 0.08);
 // Glassmorphism
 $glass-bg: rgba(22, 27, 34, 0.7);
 $glass-border: rgba(255, 255, 255, 0.1);
-$glass-blur: 10px;
+$glass-blur: 12px;
 
 // Fonts
-$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 $font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
 // Transitions
-$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 $transition-fast: all 0.2s ease;
+$transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 // Spacing
 $spacing-xs: 0.5rem;
@@ -27,3 +28,10 @@ $spacing-sm: 1rem;
 $spacing-md: 2rem;
 $spacing-lg: 4rem;
 $spacing-xl: 8rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;

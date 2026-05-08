@@ -1,7 +1,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -15,14 +15,28 @@
 }
 
 @keyframes glow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.2), 0 0 20px rgba(0, 255, 153, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4), 0 0 30px rgba(0, 255, 153, 0.2);
+  }
 }
 
-@keyframes slideInLeft {
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(30px);
   }
   to {
     opacity: 1;
@@ -30,10 +44,24 @@
   }
 }
 
-.animate-fade-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+.reveal {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.active {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
 }

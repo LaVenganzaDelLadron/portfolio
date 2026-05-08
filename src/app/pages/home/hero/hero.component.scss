@@ -2,12 +2,16 @@
 @use 'mixins' as *;
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding: 120px 0 60px;
+
+  @include responsive(lg) {
+    padding: 100px 0;
+  }
 }
 
 .hero-bg-effects {
@@ -20,23 +24,23 @@
 
   .glow-circle {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: clamp(300px, 40vw, 600px);
+    height: clamp(300px, 40vw, 600px);
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.15;
+    filter: blur(120px);
+    opacity: 0.12;
   }
 
   .circle-1 {
-    top: -100px;
-    right: -100px;
-    background: $color-neon-green;
+    top: -10%;
+    right: -5%;
+    background: $color-primary;
   }
 
   .circle-2 {
-    bottom: -100px;
-    left: -100px;
-    background: $color-purple;
+    bottom: 5%;
+    left: -10%;
+    background: $color-accent;
   }
 
   .grid-overlay {
@@ -46,94 +50,212 @@
                       linear-gradient(90deg, $border-color 1px, transparent 1px);
     background-size: 50px 50px;
     mask-image: radial-gradient(circle at center, black, transparent 80%);
-    opacity: 0.2;
+    opacity: 0.15;
   }
+}
+
+.hero-content {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+
+  @include responsive(lg) {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero-text {
+  z-index: 1;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba($color-neon-green, 0.05);
-  border: 1px solid rgba($color-neon-green, 0.2);
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba($color-primary, 0.03);
+  border: 1px solid rgba($color-primary, 0.15);
   border-radius: 100px;
-  color: $color-neon-green;
-  font-size: 0.8rem;
+  color: $color-primary;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(4px);
 
   .pulse {
-    width: 8px;
-    height: 8px;
-    background: $color-neon-green;
+    width: 10px;
+    height: 10px;
+    background: $color-primary;
     border-radius: 50%;
-    animation: glow 2s infinite;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid $color-primary;
+      animation: ripple 2s infinite;
+    }
   }
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-}
+  letter-spacing: -0.02em;
 
-.hero-subtitle {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  color: $text-secondary;
-  margin-bottom: 2rem;
-  height: 1.5em;
-
-  .cursor {
-    animation: glow 1s infinite;
-    color: $color-neon-green;
+  .text-gradient {
+    display: inline-block;
   }
 }
 
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: $text-secondary;
+  margin-bottom: 2rem;
+  font-family: $font-mono;
+  min-height: 1.5em;
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: $color-primary;
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+    box-shadow: 0 0 8px $color-primary;
+  }
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-description {
-  max-width: 600px;
-  font-size: 1.1rem;
+  max-width: 580px;
+  font-size: 1.15rem;
   color: $text-secondary;
   margin-bottom: 3rem;
+  line-height: 1.7;
 }
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .btn-neon {
-  background: $color-neon-green;
+  background: $color-primary;
   color: $bg-primary;
-  padding: 1rem 2rem;
-  border-radius: 4px;
+  padding: 1.1rem 2.5rem;
+  border-radius: 6px;
   font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   transition: $transition-smooth;
+  box-shadow: 0 4px 15px rgba($color-primary, 0.2);
+
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-neon-green, 0.3);
+    box-shadow: 0 8px 25px rgba($color-primary, 0.4);
+    background: lighten($color-primary, 5%);
   }
 }
 
 .btn-ghost {
-  border: 1px solid $border-color;
+  border: 1px solid rgba($text-primary, 0.2);
   color: $text-primary;
-  padding: 1rem 2rem;
-  border-radius: 4px;
+  padding: 1.1rem 2.5rem;
+  border-radius: 6px;
   font-weight: 600;
+  font-size: 1rem;
   transition: $transition-smooth;
+  backdrop-filter: blur(4px);
+
   &:hover {
-    background: rgba(255,255,255,0.05);
-    border-color: $text-primary;
+    background: rgba($text-primary, 0.05);
+    border-color: rgba($text-primary, 0.5);
+    transform: translateY(-3px);
   }
 }
 
 .hero-socials {
   display: flex;
-  gap: 1.5rem;
-  font-size: 1.5rem;
+  gap: 2rem;
+  font-size: 1.4rem;
   color: $text-secondary;
-  a:hover { color: $color-neon-green; }
+
+  a {
+    transition: $transition-smooth;
+    &:hover {
+      color: $color-primary;
+      transform: translateY(-5px);
+      filter: drop-shadow(0 0 8px rgba($color-primary, 0.5));
+    }
+  }
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  .image-wrapper {
+    position: relative;
+    width: min(100%, 450px);
+    aspect-ratio: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -15px;
+      border: 2px solid rgba($color-primary, 0.1);
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      animation: morph 15s linear infinite;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -30px;
+      border: 1px solid rgba($color-secondary, 0.1);
+      border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+      animation: morph 20s linear infinite reverse;
+      z-index: -2;
+    }
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morph 15s linear infinite;
+    border: 3px solid rgba($text-primary, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+  75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }

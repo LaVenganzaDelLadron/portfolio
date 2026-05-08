@@ -6,11 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h2 class="section-title">
-      <span class="number">{{ number }}.</span>
-      <span class="text-gradient">{{ title }}</span>
-      <div class="line"></div>
-    </h2>
+    <div class="section-title-container">
+      <div class="eyebrow mono"><span class="number">{{ number }}</span> // SYSTEM_READY</div>
+      <h2 class="title">
+        {{ title }}
+        <span class="dot">.</span>
+      </h2>
+      <div class="title-line"></div>
+    </div>
   `,
   styleUrls: ['./section-title.component.scss']
 })

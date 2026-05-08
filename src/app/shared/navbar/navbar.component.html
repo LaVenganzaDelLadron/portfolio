@@ -14,8 +14,8 @@
     </ul>
 
     <div class="nav-actions">
-      <button class="btn-primary btn-sm">Resume</button>
-      <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+      <button class="btn-resume">Resume</button>
+      <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle mobile menu">
         <span class="bar" [class.open]="isMobileMenuOpen"></span>
       </button>
     </div>
@@ -30,7 +30,7 @@
         </a>
       </li>
       <li>
-        <button class="btn-primary btn-full">Resume</button>
+        <button class="btn-resume btn-resume-mobile">Resume</button>
       </li>
     </ul>
   </div>

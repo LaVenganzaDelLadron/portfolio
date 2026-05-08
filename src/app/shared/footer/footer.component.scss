@@ -2,57 +2,58 @@
 @use 'mixins' as *;
 
 .footer {
-  padding: $spacing-md 0;
-  border-top: 1px solid $border-color;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba($text-primary, 0.05);
   background-color: $bg-primary;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: $spacing-md;
+  gap: 3rem;
+  align-items: center;
 }
 
 .footer-info {
   text-align: center;
+  max-width: 400px;
+
   p {
     color: $text-secondary;
-    margin-top: $spacing-xs;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &-img {
-    height: 40px;
+    height: 32px;
     width: auto;
-    filter: brightness(1.1) drop-shadow(0 0 10px rgba(0, 255, 204, 0.3));
-    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba($color-primary, 0.2));
+    transition: $transition-smooth;
 
     &:hover {
-      filter: brightness(1.3) drop-shadow(0 0 20px rgba(0, 255, 204, 0.5));
+      filter: drop-shadow(0 0 12px rgba($color-primary, 0.4)) brightness(1.1);
+      transform: scale(1.05);
     }
-  }
-
-  &-accent {
-    color: $color-neon-green;
   }
 }
 
 .footer-bottom {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-sm;
-  padding-top: $spacing-sm;
-  border-top: 1px solid rgba(255,255,255,0.03);
-  color: $text-secondary;
-  font-size: 0.8rem;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba($text-primary, 0.03);
+  color: rgba($text-secondary, 0.6);
+  font-size: 0.85rem;
 
   @include responsive(md) {
     flex-direction: row;
@@ -62,6 +63,12 @@
 
 .footer-links {
   display: flex;
-  gap: 1.5rem;
-  a:hover { color: $color-neon-green; }
+  gap: 2rem;
+
+  a {
+    transition: $transition-fast;
+    &:hover {
+      color: $color-primary;
+    }
+  }
 }

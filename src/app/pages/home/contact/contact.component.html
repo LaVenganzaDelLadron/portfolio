@@ -1,7 +1,7 @@
-<section class="contact section-padding">
+<section class="contact section-padding" id="contact">
   <div class="container">
     <div class="contact-header">
-      <app-section-title number="05" title="Get In Touch"></app-section-title>
+      <app-section-title number="06" title="Get In Touch"></app-section-title>
       <p>I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
     </div>
 
@@ -9,41 +9,45 @@
       <div class="contact-form-wrapper">
         <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
           <div class="form-group">
-            <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Name" required>
+            <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Full Name" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Email" required>
+            <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Email Address" required>
           </div>
           <div class="form-group">
             <input type="text" name="subject" [(ngModel)]="formData.subject" placeholder="Subject" required>
           </div>
           <div class="form-group">
-            <textarea name="message" [(ngModel)]="formData.message" placeholder="Message" rows="5" required></textarea>
+            <textarea name="message" [(ngModel)]="formData.message" placeholder="Your Message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn-neon btn-full" [disabled]="!contactForm.form.valid">Send Message</button>
+          <button type="submit" class="btn-full" [disabled]="!contactForm.form.valid">Send Message</button>
         </form>
       </div>
 
       <div class="contact-info">
         <div class="info-item">
-          <i class="fas fa-envelope"></i>
+          <div class="icon-box">
+            <i class="fas fa-envelope"></i>
+          </div>
           <div>
             <h4>Email</h4>
             <p>hello&#64;argus.dev</p>
           </div>
         </div>
         <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
+          <div class="icon-box">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
           <div>
             <h4>Location</h4>
             <p>Global / Remote</p>
           </div>
         </div>
         <div class="social-grid">
-          <a href="#" class="social-box"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-box"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-box"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-box"><i class="fab fa-discord"></i></a>
+          <a href="https://github.com" target="_blank" class="social-box" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="social-box" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com" target="_blank" class="social-box" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.com" target="_blank" class="social-box" aria-label="Discord"><i class="fab fa-discord"></i></a>
         </div>
       </div>
     </div>
