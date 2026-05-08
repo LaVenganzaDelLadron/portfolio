@@ -1,9 +1,4 @@
-export interface Skill {
-  name: string;
-  icon: string;
-  level: number; // 0 to 100
-  category: 'frontend' | 'backend' | 'security' | 'tools';
-}
+import { Skill } from '../core/models/skill.model';
 
 export const SKILLS: Skill[] = [
   { name: 'Angular', icon: 'angular', level: 95, category: 'frontend' },

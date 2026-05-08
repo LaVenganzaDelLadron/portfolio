@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PROJECTS, Project } from '../../../data/projects';
+import { PROJECTS } from '../../../data/projects';
+import { Project } from '../../../core/models/project.model';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
 
 @Component({

@@ -2,15 +2,24 @@ import { Certificate } from '../core/models/certificate.model';
 
 export const CERTIFICATES: Certificate[] = [
   {
-    name: 'Bug Bounty Hunter (Sample)',
-    issuer: 'HackerOne',
-    year: '2024',
-    detail: 'Completed triage, writeups, and vulnerability verification (sample data).',
+    name: 'Certified Ethical Hacker (CEH)',
+    issuer: 'EC-Council',
+    date: '2022',
+    url: '#',
+    image: 'assets/images/certs/ceh.png'
   },
   {
-    name: 'Web Security Fundamentals (Sample)',
-    issuer: 'TryHackMe',
-    year: '2023',
+    name: 'AWS Certified Security - Specialty',
+    issuer: 'Amazon Web Services',
+    date: '2021',
+    url: '#',
+    image: 'assets/images/certs/aws-security.png'
   },
+  {
+    name: 'Offensive Security Certified Professional (OSCP)',
+    issuer: 'OffSec',
+    date: '2023',
+    url: '#',
+    image: 'assets/images/certs/oscp.png'
+  }
 ];
-

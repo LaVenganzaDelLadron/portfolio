@@ -1,8 +1,66 @@
-.list{display:flex;flex-direction:column;gap:1rem;}
-.item{padding:1.1rem;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(122,92,255,.22);}
-.top{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;}
-h3{margin:0;font-size:1.02rem;}
-.year{color:#00ff99;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;}
-.issuer{margin-top:.35rem;color:rgba(230,237,243,.72);}
-.detail{margin:.6rem 0 0;color:rgba(230,237,243,.72);line-height:1.6;}
+@import 'variables';
+@import 'mixins';
 
+.certs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include responsive(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cert-card {
+  @include glassmorphism;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: $transition-smooth;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $color-neon-green;
+    box-shadow: 0 10px 20px rgba($color-neon-green, 0.1);
+
+    .cert-icon i {
+      color: $color-neon-green;
+      text-shadow: 0 0 10px rgba($color-neon-green, 0.5);
+    }
+  }
+}
+
+.cert-icon {
+  font-size: 2rem;
+  color: $text-secondary;
+  transition: $transition-smooth;
+}
+
+.cert-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: $text-secondary;
+  margin-bottom: 1rem;
+}
+
+.cert-link {
+  font-size: 0.8rem;
+  color: $color-neon-green;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

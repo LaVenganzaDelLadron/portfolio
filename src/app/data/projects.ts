@@ -1,13 +1,4 @@
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  githubUrl: string;
-  liveUrl: string;
-  category: 'security' | 'web' | 'cloud';
-}
+import { Project } from '../core/models/project.model';
 
 export const PROJECTS: Project[] = [
   {

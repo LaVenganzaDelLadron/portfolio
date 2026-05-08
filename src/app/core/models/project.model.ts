@@ -1,11 +1,10 @@
 export interface Project {
-  id: string;
-  name: string;
-  type: 'CTF' | 'Web App' | 'Security Research' | 'Tooling';
-  summary: string;
-  tech: string[];
+  id: number | string;
+  title: string;
+  description: string;
   image: string;
-  repoUrl: string;
-  links: { label: string; url: string }[];
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  category: 'security' | 'web' | 'cloud' | 'CTF' | 'Security Research' | 'Tooling';
 }
-

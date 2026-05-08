@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EXPERIENCES, Experience } from '../../../data/experience';
+import { EXPERIENCES } from '../../../data/experience';
+import { Experience } from '../../../core/models/experience.model';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
 
 @Component({

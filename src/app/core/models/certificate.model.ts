@@ -1,7 +1,7 @@
 export interface Certificate {
   name: string;
   issuer: string;
-  year: string;
-  detail?: string;
+  date: string;
+  url: string;
+  image: string;
 }
-

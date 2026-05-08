@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
 import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
 import { Certificate } from '../../../core/models/certificate.model';
@@ -6,17 +7,16 @@ import { Certificate } from '../../../core/models/certificate.model';
 @Component({
   selector: 'app-certifications',
   standalone: true,
-  imports: [SectionTitleComponent],
+  imports: [CommonModule, SectionTitleComponent],
   templateUrl: './certifications.component.html',
-  styleUrl: './certifications.component.scss',
+  styleUrls: ['./certifications.component.scss'],
 })
 export class CertificationsComponent implements OnInit {
   certificates: Certificate[] = [];
 
-  constructor(private readonly data: PortfolioDataService) {}
+  constructor(private dataService: PortfolioDataService) {}
 
   ngOnInit(): void {
-    this.certificates = this.data.getCertificates();
+    this.certificates = this.dataService.getCertificates();
   }
 }
-

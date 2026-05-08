@@ -14,8 +14,8 @@ export class PortfolioDataService {
     return PROJECTS;
   }
 
-  getProjectById(id: string): Project | undefined {
-    return PROJECTS.find((p) => p.id === id);
+  getProjectById(id: number | string): Project | undefined {
+    return PROJECTS.find((p) => p.id.toString() === id.toString());
   }
 
   getSkills(): Skill[] {
@@ -26,4 +26,3 @@ export class PortfolioDataService {
     return CERTIFICATES;
   }
 }
-

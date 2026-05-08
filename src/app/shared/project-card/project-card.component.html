@@ -1,27 +1,26 @@
-<article class="card" [attr.aria-label]="project().name">
+<article class="card" [attr.aria-label]="project().title">
   <div class="media">
-    <img [src]="project().image" [alt]="project().name" loading="lazy" />
+    <img [src]="project().image" [alt]="project().title" loading="lazy" />
     <div class="overlay" aria-hidden="true"></div>
   </div>
 
   <div class="body">
     <div class="row">
-      <h3>{{ project().name }}</h3>
-      <span class="badge">{{ project().type }}</span>
+      <h3>{{ project().title }}</h3>
+      <span class="badge">{{ project().category }}</span>
     </div>
 
-    <p class="desc">{{ project().summary }}</p>
+    <p class="desc">{{ project().description }}</p>
 
     <div class="tech">
-      @for (tech of project().tech; track tech) {
+      @for (tech of project().technologies; track tech) {
         <span class="tag">{{ tech }}</span>
       }
     </div>
 
     <div class="actions">
-      <a class="link" [routerLink]="['/projects', project().id]">View</a>
-      <a class="link" [href]="project().repoUrl" target="_blank" rel="noopener">Repo</a>
+      <a class="link" [href]="project().liveUrl" target="_blank">Live Demo</a>
+      <a class="link" [href]="project().githubUrl" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </article>
-

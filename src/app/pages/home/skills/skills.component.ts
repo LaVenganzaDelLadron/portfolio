@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SKILLS, Skill } from '../../../data/skills';
+import { SKILLS } from '../../../data/skills';
+import { Skill } from '../../../core/models/skill.model';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
 
 @Component({

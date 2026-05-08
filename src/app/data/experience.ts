@@ -1,10 +1,4 @@
-export interface Experience {
-  company: string;
-  position: string;
-  period: string;
-  description: string[];
-  technologies: string[];
-}
+import { Experience } from '../core/models/experience.model';
 
 export const EXPERIENCES: Experience[] = [
   {

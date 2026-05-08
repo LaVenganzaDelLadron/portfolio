@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
 
 @Component({
@@ -17,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
     SkillsComponent,
     ProjectsComponent,
     ExperienceComponent,
+    CertificationsComponent,
     ContactComponent
   ],
   template: `
@@ -26,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
       <app-skills id="skills"></app-skills>
       <app-projects id="projects"></app-projects>
       <app-experience id="experience"></app-experience>
+      <app-certifications id="certifications"></app-certifications>
       <app-contact id="contact"></app-contact>
     </main>
   `,

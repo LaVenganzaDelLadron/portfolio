@@ -1,19 +1,18 @@
-<section class="container" aria-label="Certifications" id="certifications">
-  <app-section-title title="Certifications" subtitle="Sample certifications (replace with your real credentials)." />
+<section class="certifications section-padding">
+  <div class="container">
+    <app-section-title number="06" title="Certifications"></app-section-title>
 
-  <div class="list">
-    @for (c of certificates; track c.name) {
-      <div class="item">
-        <div class="top">
-          <h3>{{ c.name }}</h3>
-          <span class="year">{{ c.year }}</span>
+    <div class="certs-grid">
+      <div class="cert-card" *ngFor="let cert of certificates">
+        <div class="cert-icon">
+          <i class="fas fa-certificate"></i>
         </div>
-        <div class="issuer">{{ c.issuer }}</div>
-        @if (c.detail) {
-          <p class="detail">{{ c.detail }}</p>
-        }
+        <div class="cert-content">
+          <h3 class="cert-name">{{ cert.name }}</h3>
+          <p class="cert-issuer">{{ cert.issuer }} • {{ cert.date }}</p>
+          <a [href]="cert.url" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+        </div>
       </div>
-    }
+    </div>
   </div>
 </section>
-

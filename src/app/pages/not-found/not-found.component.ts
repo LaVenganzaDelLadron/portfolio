@@ -14,19 +14,6 @@ import { RouterModule } from '@angular/router';
       <button routerLink="/" class="btn-neon">Return to Base</button>
     </div>
   `,
-  styles: [`
-    @import 'variables';
-    @import 'mixins';
-    .not-found {
-      height: 100vh;
-      @include flex-center;
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-    h1 { font-size: 8rem; margin: 0; }
-    h2 { font-size: 2rem; color: $color-neon-green; }
-    p { color: $text-secondary; margin-bottom: 2rem; }
-  `]
+  styleUrls: ['./not-found.component.scss']
 })
 export class NotFoundComponent {}
