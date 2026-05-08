@@ -4,6 +4,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { BugBountyComponent } from './bug-bounty/bug-bounty.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ContactComponent } from './contact/contact.component';
@@ -17,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
+    BugBountyComponent,
     ExperienceComponent,
     CertificationsComponent,
     ContactComponent
@@ -27,6 +29,7 @@ import { ContactComponent } from './contact/contact.component';
       <app-about id="about"></app-about>
       <app-skills id="skills"></app-skills>
       <app-projects id="projects"></app-projects>
+      <app-bug-bounty id="bug-bounty"></app-bug-bounty>
       <app-experience id="experience"></app-experience>
       <app-certifications id="certifications"></app-certifications>
       <app-contact id="contact"></app-contact>

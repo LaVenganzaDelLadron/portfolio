@@ -3,32 +3,22 @@ import { Project } from '../core/models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'SentinX: Network Intrusion System',
-    description: 'A professional-grade real-time network monitoring and threat detection system using machine learning.',
-    image: 'assets/images/projects/project1.jpg',
-    technologies: ['Python', 'Angular', 'Go', 'TensorFlow', 'PostgreSQL'],
-    githubUrl: 'https://github.com/argus/sentinx',
-    liveUrl: 'https://sentinx.demo',
-    category: 'security'
+    title: 'CodeGo - AI Code Review Platform',
+    description: 'Intelligent code review and analysis platform powered by machine learning. Integrates with GitHub/GitLab to provide real-time security and quality insights.',
+    image: 'assets/images/project/codego.png',
+    technologies: ['Angular', 'Node.js', 'Python', 'PostgreSQL', 'TensorFlow', 'GitHub API'],
+    githubUrl: 'https://github.com/argus/codego',
+    liveUrl: 'https://codego.io',
+    category: 'web'
   },
   {
     id: 2,
-    title: 'CloudArmor Firewall',
-    description: 'Next-generation cloud native firewall with automated rule generation and WAF capabilities.',
-    image: 'assets/images/projects/project2.jpg',
-    technologies: ['Angular', 'Node.js', 'AWS', 'Docker', 'Kubernetes'],
-    githubUrl: 'https://github.com/argus/cloudarmor',
-    liveUrl: 'https://cloudarmor.io',
-    category: 'cloud'
-  },
-  {
-    id: 3,
-    title: 'ZeroTrust Auth Engine',
-    description: 'Implementation of Zero Trust Architecture using identity-based access control and micro-segmentation.',
-    image: 'assets/images/projects/project3.jpg',
-    technologies: ['TypeScript', 'NestJS', 'Redis', 'WebAuthn', 'OAuth2'],
-    githubUrl: 'https://github.com/argus/zerotrust',
-    liveUrl: 'https://zerotrust.auth',
+    title: 'Hades - Penetration Testing Suite',
+    description: 'Comprehensive penetration testing framework with automated reconnaissance, vulnerability scanning, and exploitation tools for authorized security assessments.',
+    image: 'assets/images/project/hades.jpeg',
+    technologies: ['Python', 'Go', 'Metasploit', 'Docker', 'Kubernetes', 'PostgreSQL'],
+    githubUrl: 'https://github.com/argus/hades',
+    liveUrl: 'https://hades.security',
     category: 'security'
   }
 ];

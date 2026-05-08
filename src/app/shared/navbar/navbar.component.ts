@@ -18,6 +18,7 @@ export class NavbarComponent {
     { name: 'About', path: '/', fragment: 'about' },
     { name: 'Skills', path: '/', fragment: 'skills' },
     { name: 'Projects', path: '/', fragment: 'projects' },
+    { name: 'Bug Bounty', path: '/', fragment: 'bug-bounty' },
     { name: 'Experience', path: '/', fragment: 'experience' },
     { name: 'Contact', path: '/', fragment: 'contact' }
   ];
