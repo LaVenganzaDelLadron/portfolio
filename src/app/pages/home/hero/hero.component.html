@@ -1,29 +1,101 @@
-<section id="home" class="flex min-h-screen items-center border-b border-white/5 pt-28 pb-20" @fadeInUp>
-  <div class="container">
-    <div class="mx-auto max-w-4xl text-center">
-      <img src="assets/images/profile/profile.jpeg" alt="Argus Profile"
-           class="mx-auto mb-8 h-28 w-28 rounded-[20px] border border-white/10 object-cover shadow-[0_24px_70px_-48px_rgba(0,0,0,0.9)] sm:h-32 sm:w-32">
+<section id="about" class="bg-[#0d1117] py-24 px-6 sm:px-12 lg:px-24">
+  <div class="container mx-auto max-w-6xl">
 
-      <h1 class="text-[clamp(3.5rem,14vw,8rem)] font-extrabold leading-none tracking-tight">
-        Argus
-      </h1>
+    <!-- Section Header -->
+    <div class="mb-12" @fadeInUp>
+      <h2 class="text-[#8b949e] font-mono text-sm uppercase tracking-[0.2em]">Profile</h2>
+    </div>
 
-      <div class="mx-auto mt-8 min-h-[2.6rem] max-w-3xl font-mono text-[clamp(1rem,3vw,1.35rem)] text-primary">
-        <span>{{ displayText }}</span>
-        <span class="ml-1 inline-block h-[1.1em] w-[2px] translate-y-1 bg-primary animate-pulse"></span>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+      <!-- Left Column: Quick Summary Card -->
+      <div class="lg:col-span-5" @fadeInUp>
+        <div class="relative group">
+          <!-- Subtle Glow Effect -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-10 blur-xl group-hover:opacity-20 transition duration-1000"></div>
+
+          <div class="relative bg-[#161b22] border border-white/5 rounded-[20px] p-8 backdrop-blur-sm shadow-2xl">
+            <div class="flex flex-col items-center text-center">
+              <img
+                src="assets/images/profile/profile2.jpg"
+                alt="Elton John Justaga"
+                class="h-32 w-32 rounded-2xl object-cover mb-6 border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+              />
+              <h3 class="text-2xl font-bold text-[#f0f6fc] tracking-tight">Elton John Justaga</h3>
+              <p class="text-secondary font-mono text-sm mt-2">Security Researcher & Developer</p>
+
+              <hr class="w-full border-white/5 my-6">
+
+              <p class="text-[#8b949e] text-sm leading-relaxed italic">
+                "Committed to the pursuit of digital integrity through rigorous testing and secure-by-design development."
+              </p>
+
+              <div class="mt-6 flex items-center gap-2 text-xs text-[#8b949e]">
+                <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                Available for Security Audits
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="mx-auto mt-6 max-w-xl text-base leading-8 text-text-secondary sm:text-lg">
-        Learn by building; breaking; rebuilding.
-      </p>
+      <!-- Right Column: Details & Roles -->
+      <div class="lg:col-span-7 space-y-10" @fadeInUp>
 
-      <div class="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row sm:justify-center">
-        <a href="#projects" class="inline-flex w-full items-center justify-center rounded-[20px] bg-primary px-7 py-4 text-sm font-bold uppercase tracking-[1.4px] text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#21ffad] sm:w-auto">
-          View Projects
-        </a>
-        <a href="mailto:hello@argus.dev" class="inline-flex w-full items-center justify-center rounded-[20px] border border-white/10 bg-white/[0.03] px-7 py-4 text-sm font-semibold uppercase tracking-[1.4px] text-text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/5 sm:w-auto">
-          Contact Me
-        </a>
+        <!-- Intro -->
+        <div>
+          <p class="text-xl sm:text-2xl text-[#f0f6fc] leading-snug font-medium">
+            I am a <span class="text-primary">cybersecurity enthusiast</span> and developer focused on building secure systems, analyzing vulnerabilities, and developing scalable applications.
+          </p>
+        </div>
+
+        <!-- Role Badges -->
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] text-[#f0f6fc] text-xs font-medium hover:border-primary/40 hover:bg-primary/5 transition-all cursor-default">
+            Cyber Security Enthusiast
+          </span>
+          <span class="px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] text-[#f0f6fc] text-xs font-medium hover:border-primary/40 hover:bg-primary/5 transition-all cursor-default">
+            Security Researcher
+          </span>
+          <span class="px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] text-[#f0f6fc] text-xs font-medium hover:border-primary/40 hover:bg-primary/5 transition-all cursor-default">
+            Bug Bounty Hunter
+          </span>
+          <span class="px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] text-[#f0f6fc] text-xs font-medium hover:border-secondary/40 hover:bg-secondary/5 transition-all cursor-default">
+            Backend Developer
+          </span>
+          <span class="px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] text-[#f0f6fc] text-xs font-medium hover:border-secondary/40 hover:bg-secondary/5 transition-all cursor-default">
+            Android Developer
+          </span>
+        </div>
+
+        <!-- Key Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3 group">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
+              <span class="text-[#8b949e] text-sm group-hover:text-[#f0f6fc] transition-colors">Focused on bug bounty research</span>
+            </li>
+            <li class="flex items-start gap-3 group">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
+              <span class="text-[#8b949e] text-sm group-hover:text-[#f0f6fc] transition-colors">Passion for web application security</span>
+            </li>
+            <li class="flex items-start gap-3 group">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
+              <span class="text-[#8b949e] text-sm group-hover:text-[#f0f6fc] transition-colors">Hands-on vulnerability testing</span>
+            </li>
+          </ul>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3 group">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary group-hover:scale-150 transition-transform"></span>
+              <span class="text-[#8b949e] text-sm group-hover:text-[#f0f6fc] transition-colors">Backend & Android experience</span>
+            </li>
+            <li class="flex items-start gap-3 group">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary group-hover:scale-150 transition-transform"></span>
+              <span class="text-[#8b949e] text-sm group-hover:text-[#f0f6fc] transition-colors">Building secure, scalable systems</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>

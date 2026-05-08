@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-xs: 420px;
+
+  --color-background: #0d1117;
+  --color-surface: #161b22;
+  --color-primary: #00ff99;
+  --color-secondary: #00d9ff;
+  --color-accent: #7a5cff;
+  --color-text-primary: #f0f6fc;
+  --color-text-secondary: #8b949e;
+  --color-border-default: rgba(255, 255, 255, 0.08);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --animate-fade-in: fadeIn 0.45s ease-out both;
+  --animate-fade-in-up: fadeInUp 0.6s ease-out both;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-morph: morph 15s linear infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 153, 0.4); }
+  }
+
+  @keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+    50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+    75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-sans antialiased overflow-x-hidden;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary font-bold leading-tight;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply w-full max-w-[1300px] mx-auto px-6 md:px-10 xl:px-16;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent inline-block;
+  }
+
+  .bg-glass {
+    /* Tailwind 4 @apply with opacity modifiers on custom colors
+       requires the color to be defined in @theme. */
+    @apply bg-surface/45 backdrop-blur-xl border border-white/5;
+  }
+
+  .btn-primary {
+    @apply rounded-[20px] bg-primary px-6 py-3 font-bold text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#21ffad] hover:shadow-[0_16px_30px_-18px_rgba(0,255,153,0.9)];
+  }
+
+  .btn-outline {
+    @apply rounded-[20px] border border-white/10 bg-white/[0.03] px-6 py-3 font-semibold text-text-primary transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #161b22;
+  border-radius: 10px;
+  border: 2px solid #0d1117;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff99;
+}
