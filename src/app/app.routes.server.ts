@@ -1,13 +1,13 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
-  // Prerender only static routes (SSR prerender requires explicit prerender params for dynamic segments)
+  // Prerender only static routes
   {
     path: '',
     renderMode: RenderMode.Prerender,
   },
   {
-    path: 'home',
+    path: '404',
     renderMode: RenderMode.Prerender,
   },
 
@@ -21,4 +21,5 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Server,
   },
 ];
+
 

@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'mixins';
-@import 'animations';
-@import 'utilities';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'animations' as *;
+@use 'utilities' as *;
 
 * {
   box-sizing: border-box;
