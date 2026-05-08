@@ -4,21 +4,21 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     title: 'CodeGo - Swissmiss Army Knife',
-    description: 'Intelligent code review and analysis platform powered by machine learning. Integrates with GitHub/GitLab to provide real-time security and quality insights.',
+    description: 'CODEGO is a Python-based tool for authorized network testing and remote system management in controlled environments.',
     image: 'assets/images/project/codego.png',
     technologies: ['Python',],
-    githubUrl: 'https://github.com/argus/codego',
-    liveUrl: 'https://codego.io',
+    githubUrl: 'https://github.com/LaVenganzaDelLadron/reverseShell',
+    liveUrl: '',
     category: 'Tooling'
   },
   {
     id: 2,
-    title: 'Hades - Malware Analyzer',
-    description: 'Comprehensive penetration testing framework with automated reconnaissance, vulnerability scanning, and exploitation tools for authorized security assessments.',
+    title: 'HadesEye - Malware Analyzer',
+    description: 'HadesEye is a mobile spyware malware that secretly collects sensitive user and device data in the background and may transmit it to remote servers without the user’s consent.',
     image: 'assets/images/project/hades.jpeg',
     technologies: ['Python', 'Kotlin', 'Firebase', 'VirusTotal', 'HybridAnalysis', 'URLScan'],
-    githubUrl: 'https://github.com/argus/hades',
+    githubUrl: 'https://github.com/LaVenganzaDelLadron/HadesEye',
     liveUrl: 'https://hades.security',
-    category: 'security'
+    category: 'Tooling'
   }
 ];

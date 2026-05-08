@@ -17,22 +17,17 @@ export class SkillsComponent {
     {
       title: 'Cybersecurity',
       icon: 'fas fa-shield-alt',
-      skills: ['Web Security Testing', 'API Testing', 'Access Control', 'Reconnaissance', 'Vulnerability Research']
+      skills: ['Web Security Testing', 'API Security Testing', 'Access Control Testing', 'Reconnaissance', 'Vulnerability Researcher', 'Bug Bounty Hunter', 'Responsible Disclosure']
     },
     {
       title: 'Bug Bounty',
       icon: 'fas fa-bug',
-      skills: ['Responsible Disclosure', 'Report Writing', 'Authentication Testing', 'Business Logic', 'OWASP Top 10']
+      skills: ['Responsible Disclosure', 'Bug Bounty Reporting', 'Authentication Testing', 'Business Logic', 'Vulnerability Research', 'Recon & Endpoint Discovery', 'Authentication & Session Testing', 'Access Control Exploitation']
     },
     {
       title: 'Backend Development',
       icon: 'fas fa-server',
-      skills: ['Node.js', 'Firebase', 'Authentication Systems', 'Client-Server Architecture', 'Secure APIs']
-    },
-    {
-      title: 'Android Development',
-      icon: 'fas fa-mobile-alt',
-      skills: ['Kotlin', 'Java', 'Android Studio', 'Firebase Auth', 'MVC Architecture']
+      skills: ['Python', 'Php', 'C++', 'C#', 'Kotlin', 'Java', 'Laravel', 'Django', 'MySQL', 'PostgreSQL', 'MVC Architecture', 'RESTful API Development' , 'Android Development']
     }
   ];
 
