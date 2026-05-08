@@ -1,28 +1,43 @@
-import { Project } from '../core/models/project.model';
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  category: 'security' | 'web' | 'cloud';
+}
 
 export const PROJECTS: Project[] = [
   {
-    id: 'codego',
-    name: 'CodeGo Dashboard',
-    type: 'Web App',
-    summary: 'Cyber-safe project dashboard UI with neon theming and smooth routing.',
-    tech: ['Angular', 'SCSS', 'SSR', 'Routing'],
-    image: 'assets/images/project/codego.png',
-    repoUrl: 'https://github.com/',
-    links: [
-      { label: 'Live Demo', url: 'https://example.com' },
-      { label: 'Report', url: 'https://example.com/report' },
-    ],
+    id: 1,
+    title: 'SentinX: Network Intrusion System',
+    description: 'A professional-grade real-time network monitoring and threat detection system using machine learning.',
+    image: 'assets/images/projects/project1.jpg',
+    technologies: ['Python', 'Angular', 'Go', 'TensorFlow', 'PostgreSQL'],
+    githubUrl: 'https://github.com/argus/sentinx',
+    liveUrl: 'https://sentinx.demo',
+    category: 'security'
   },
   {
-    id: 'hades',
-    name: 'Hades Security Toolkit',
-    type: 'Tooling',
-    summary: 'Security automation toolkit layout: scans, summaries, and incident workflows.',
-    tech: ['TypeScript', 'Security', 'CLI UX'],
-    image: 'assets/images/project/hades.jpeg',
-    repoUrl: 'https://github.com/',
-    links: [{ label: 'Docs', url: 'https://example.com' }],
+    id: 2,
+    title: 'CloudArmor Firewall',
+    description: 'Next-generation cloud native firewall with automated rule generation and WAF capabilities.',
+    image: 'assets/images/projects/project2.jpg',
+    technologies: ['Angular', 'Node.js', 'AWS', 'Docker', 'Kubernetes'],
+    githubUrl: 'https://github.com/argus/cloudarmor',
+    liveUrl: 'https://cloudarmor.io',
+    category: 'cloud'
   },
+  {
+    id: 3,
+    title: 'ZeroTrust Auth Engine',
+    description: 'Implementation of Zero Trust Architecture using identity-based access control and micro-segmentation.',
+    image: 'assets/images/projects/project3.jpg',
+    technologies: ['TypeScript', 'NestJS', 'Redis', 'WebAuthn', 'OAuth2'],
+    githubUrl: 'https://github.com/argus/zerotrust',
+    liveUrl: 'https://zerotrust.auth',
+    category: 'security'
+  }
 ];
-

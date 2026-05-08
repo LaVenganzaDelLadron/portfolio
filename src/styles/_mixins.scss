@@ -1,107 +1,39 @@
-/* Reusable mixins */
+@import 'variables';
 
-@use 'variables' as v;
-
-@mixin neon-border($color, $alpha: 0.22) {
-  border: 1px solid rgba($color, $alpha);
-  box-shadow: 0 0 0 1px rgba($color, $alpha);
+@mixin glassmorphism {
+  background: $glass-bg;
+  backdrop-filter: blur($glass-blur);
+  -webkit-backdrop-filter: blur($glass-blur);
+  border: 1px solid $glass-border;
+  border-radius: 12px;
 }
 
-@mixin neon-glow($color, $alpha: 0.18) {
-  box-shadow: 0 0 18px rgba($color, $alpha), 0 0 52px rgba($color, $alpha / 1.7);
+@mixin neon-glow($color) {
+  box-shadow: 0 0 10px rgba($color, 0.3), 0 0 20px rgba($color, 0.1);
+  border: 1px solid rgba($color, 0.5);
 }
 
-/* Global base styles */
-@mixin global {
-  :root {
-    color-scheme: dark;
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    --bg: #{v.$bg};
-    --neon-green: #{v.$neon-green};
-    --cyan: #{v.$cyan};
-    --purple: #{v.$purple};
-    --text: #{v.$text};
-    --text-muted: #{v.$text-muted};
-
-    --panel: #{v.$panel};
-    --panel-2: #{v.$panel-2};
-
-    --border-cyan: #{v.$border};
-    --border-green: #{v.$border-2};
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body {
-    height: 100%;
-  }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    overflow-x: hidden;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  ::selection {
-    background: rgba(0, 255, 153, 0.25);
-    color: var(--text);
-  }
-
-  /* Scrollbar */
-  *::-webkit-scrollbar { width: 10px; height: 10px; }
-  *::-webkit-scrollbar-thumb {
-    background: rgba(0, 217, 255, 0.25);
-    border-radius: 999px;
-    border: 2px solid rgba(13, 17, 23, 1);
-  }
-
-  /* Layout helpers */
-  .container {
-    width: min(1120px, calc(100% - 2rem));
-    margin-inline: auto;
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  /* Subtle scanlines */
-  body::before {
-    content: '';
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    background: repeating-linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.03),
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-    mix-blend-mode: overlay;
-    opacity: 0.18;
-    z-index: 0;
-  }
-
-  /* Ensure app content sits above scanlines */
-  app-root, router-outlet, main {
-    position: relative;
-    z-index: 1;
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 640px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1280px) { @content; }
   }
 }
 
+@mixin section-padding {
+  padding: $spacing-lg 0;
+  @include responsive(md) {
+    padding: $spacing-xl 0;
+  }
+}

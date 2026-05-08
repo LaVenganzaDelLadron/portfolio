@@ -1,23 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PROJECTS, Project } from '../../../data/projects';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
-import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
-import { Project } from '../../../core/models/project.model';
-import { ProjectCardComponent } from '../../../shared/project-card/project-card.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SectionTitleComponent, ProjectCardComponent],
+  imports: [CommonModule, SectionTitleComponent],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
+  styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
-  projects: Project[] = [];
-
-  constructor(private readonly data: PortfolioDataService) {}
-
-  ngOnInit(): void {
-    this.projects = this.data.getProjects();
-  }
+export class ProjectsComponent {
+  projects: Project[] = PROJECTS;
 }
-

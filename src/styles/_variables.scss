@@ -1,20 +1,29 @@
-/* Cyber theme variables */
+// Color Palette
+$bg-primary: #0d1117;
+$bg-secondary: #161b22;
+$color-neon-green: #00ff99;
+$color-cyan: #00d9ff;
+$color-purple: #7a5cff;
+$text-primary: #f0f6fc;
+$text-secondary: #8b949e;
+$border-color: rgba(255, 255, 255, 0.08);
 
-$bg: #0d1117;
-$neon-green: #00ff99;
-$cyan: #00d9ff;
-$purple: #7a5cff;
+// Glassmorphism
+$glass-bg: rgba(22, 27, 34, 0.7);
+$glass-border: rgba(255, 255, 255, 0.1);
+$glass-blur: 10px;
 
-$text: #e6edf3;
-$text-muted: rgba(230, 237, 243, 0.72);
+// Fonts
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-$panel: rgba(255, 255, 255, 0.04);
-$panel-2: rgba(255, 255, 255, 0.06);
+// Transitions
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.2s ease;
 
-$border: rgba(0, 217, 255, 0.18);
-$border-2: rgba(0, 255, 153, 0.18);
-
-$shadow-neon-green: 0 0 22px rgba(0, 255, 153, 0.18), 0 0 60px rgba(0, 255, 153, 0.10);
-$shadow-cyan: 0 0 18px rgba(0, 217, 255, 0.18), 0 0 52px rgba(0, 217, 255, 0.10);
-$shadow-purple: 0 0 20px rgba(122, 92, 255, 0.16);
-
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 8rem;

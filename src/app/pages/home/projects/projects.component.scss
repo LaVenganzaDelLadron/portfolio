@@ -1,3 +1,150 @@
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-@media(max-width:920px){.grid{grid-template-columns:1fr;}}
+@import 'variables';
+@import 'mixins';
 
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 20px;
+
+  @include responsive(lg) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &.reverse {
+    .project-content {
+      @include responsive(lg) {
+        grid-column: 7 / -1;
+        text-align: right;
+      }
+    }
+    .project-tech-list {
+      @include responsive(lg) {
+        justify-content: flex-end;
+      }
+    }
+    .project-links {
+      @include responsive(lg) {
+        justify-content: flex-end;
+      }
+    }
+    .project-image {
+      @include responsive(lg) {
+        grid-column: 1 / 8;
+      }
+    }
+  }
+}
+
+.project-content {
+  z-index: 2;
+  @include responsive(lg) {
+    grid-column: 1 / 7;
+  }
+}
+
+.project-overline {
+  color: $color-neon-green;
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.project-description {
+  @include glassmorphism;
+  padding: 1.5rem;
+  background-color: $bg-secondary;
+  color: $text-secondary;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.5);
+
+  @include responsive(lg) {
+    width: 110%;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.reverse .project-description {
+  @include responsive(lg) {
+    left: -10%;
+  }
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-secondary;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  a:hover { color: $color-neon-green; }
+}
+
+.project-image {
+  @include responsive(lg) {
+    grid-column: 6 / -1;
+    grid-row: 1 / 1;
+  }
+
+  .img-container {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: $color-neon-green;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1) brightness(90%);
+      mix-blend-mode: multiply;
+      transition: $transition-smooth;
+    }
+
+    .img-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: $bg-primary;
+      mix-blend-mode: screen;
+      opacity: 0.3;
+      transition: $transition-smooth;
+    }
+
+    &:hover {
+      background-color: transparent;
+      img {
+        filter: none;
+        mix-blend-mode: normal;
+      }
+      .img-overlay {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.more-projects {
+  text-align: center;
+  margin-top: 5rem;
+}

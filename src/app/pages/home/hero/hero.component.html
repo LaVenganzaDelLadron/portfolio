@@ -1,34 +1,39 @@
-<section class="hero" aria-label="Hero">
-  <app-particle-background></app-particle-background>
-  <app-cyber-grid></app-cyber-grid>
-  <app-matrix-rain></app-matrix-rain>
+<section class="hero" @fadeInUp>
+  <div class="hero-bg-effects">
+    <div class="glow-circle circle-1"></div>
+    <div class="glow-circle circle-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
-  <div class="container hero-inner">
-    <div class="copy">
-      <div class="kicker">NEON DARK • CYBER SECURITY</div>
-      <h1>
-        Secure systems.
-        <span class="glow">Breach smarter.</span>
-      </h1>
-      <p>
-        Modern Angular portfolio UI with routing, reusable components, smooth animations, and a hacker-style theme.
-      </p>
-
-      <app-terminal-typing></app-terminal-typing>
-
-      <div class="cta-row">
-        <a class="primary" routerLink="/home" fragment="projects">Explore Projects</a>
-        <a class="secondary" href="mailto:hello@example.com">Contact</a>
-      </div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span class="pulse"></span>
+      Available for new projects
     </div>
 
-    <div class="side" aria-hidden="true">
-      <div class="card">
-        <div class="stat"><span class="label">MODE</span><span class="value">HACKER</span></div>
-        <div class="stat"><span class="label">STACK</span><span class="value">ANGULAR+SCSS</span></div>
-        <div class="stat"><span class="label">FOCUS</span><span class="value">SECURITY UX</span></div>
-      </div>
+    <h1 class="hero-title">
+      Securing the <span class="text-gradient">Digital</span><br>
+      Frontier with Code.
+    </h1>
+
+    <p class="hero-subtitle">
+      <span class="mono">> </span> {{ displayText }}<span class="cursor">|</span>
+    </p>
+
+    <p class="hero-description">
+      Specializing in building robust, high-performance applications with a
+      security-first mindset. From intrusion detection to scalable microservices.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-neon">View Projects</button>
+      <button class="btn-ghost">Contact Me</button>
+    </div>
+
+    <div class="hero-socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
 </section>
-

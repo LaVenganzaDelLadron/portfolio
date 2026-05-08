@@ -1,18 +1,39 @@
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" routerLink="/home" aria-label="Portfolio home">
-      <span class="brand-mark" aria-hidden="true">⌬</span>
-      <span class="brand-text">ARGUS//SEC</span>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar-container">
+    <a routerLink="/" class="logo">
+      <span class="logo-accent">&lt;</span>
+      ARGUS
+      <span class="logo-accent">/&gt;</span>
     </a>
 
-    <nav class="links" aria-label="Primary">
-      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/home" fragment="projects">Projects</a>
-      <a routerLink="/home" fragment="certifications">Certifications</a>
-      <a routerLink="/home" fragment="contact">Contact</a>
-    </nav>
+    <!-- Desktop Menu -->
+    <ul class="nav-links">
+      <li *ngFor="let link of navLinks">
+        <a [routerLink]="link.path" [fragment]="link.fragment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          {{ link.name }}
+        </a>
+      </li>
+    </ul>
 
-    <a class="cta" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <div class="nav-actions">
+      <button class="btn-primary btn-sm">Resume</button>
+      <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <span class="bar" [class.open]="isMobileMenuOpen"></span>
+      </button>
+    </div>
   </div>
-</header>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <ul class="mobile-nav-links">
+      <li *ngFor="let link of navLinks">
+        <a [routerLink]="link.path" [fragment]="link.fragment" (click)="closeMobileMenu()">
+          {{ link.name }}
+        </a>
+      </li>
+      <li>
+        <button class="btn-primary btn-full">Resume</button>
+      </li>
+    </ul>
+  </div>
+</nav>

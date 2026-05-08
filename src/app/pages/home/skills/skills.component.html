@@ -1,13 +1,22 @@
-<section class="container" aria-label="Skills" id="skills">
-  <app-section-title title="Skills" subtitle="A mix of frontend engineering and security-aware thinking." />
+<section class="skills section-padding">
+  <div class="container">
+    <app-section-title number="02" title="Technical Arsenal"></app-section-title>
 
-  <div class="skills">
-    @for (s of skills; track s.name) {
-      <div class="skill">
-        <div class="name">{{ s.name }}</div>
-        <div class="level">{{ s.level }}</div>
+    <div class="skills-grid">
+      <div class="skill-category" *ngFor="let cat of categories">
+        <h3 class="category-title">{{ formatCategory(cat) }}</h3>
+        <div class="skills-list">
+          <div class="skill-item" *ngFor="let skill of getSkillsByCategory(cat)">
+            <div class="skill-info">
+              <span>{{ skill.name }}</span>
+              <span>{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    }
+    </div>
   </div>
 </section>
-

@@ -1,0 +1,33 @@
+<section class="experience section-padding">
+  <div class="container">
+    <app-section-title number="04" title="Professional Path"></app-section-title>
+
+    <div class="tab-container">
+      <div class="tab-list">
+        <button
+          *ngFor="let exp of experiences; let i = index"
+          (click)="setActiveTab(i)"
+          [class.active]="activeTab === i">
+          {{ exp.company }}
+        </button>
+        <div class="active-indicator" [style.transform]="'translateY(' + (activeTab * 42) + 'px)'"></div>
+      </div>
+
+      <div class="tab-content">
+        <div class="job-info" *ngIf="experiences[activeTab]">
+          <h3 class="job-title">
+            {{ experiences[activeTab].position }}
+            <span class="company">@ {{ experiences[activeTab].company }}</span>
+          </h3>
+          <p class="job-period mono">{{ experiences[activeTab].period }}</p>
+          <ul class="job-description">
+            <li *ngFor="let desc of experiences[activeTab].description">{{ desc }}</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-tag" *ngFor="let tech of experiences[activeTab].technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

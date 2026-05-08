@@ -1,10 +1,36 @@
-<section class="container" aria-label="Projects" id="projects">
-  <app-section-title title="Projects" subtitle="Hover for neon glow. Click to open the details route." />
+<section class="projects section-padding">
+  <div class="container">
+    <app-section-title number="03" title="Featured Work"></app-section-title>
 
-  <div class="grid">
-    @for (p of projects; track p.id) {
-      <app-project-card [project]="p"></app-project-card>
-    }
+    <div class="projects-list">
+      <div class="project-item" *ngFor="let project of projects; let i = index" [class.reverse]="i % 2 !== 0">
+        <div class="project-content">
+          <p class="project-overline">Featured Project</p>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <div class="project-description">
+            <p>{{ project.description }}</p>
+          </div>
+          <ul class="project-tech-list">
+            <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+          </ul>
+          <div class="project-links">
+            <a [href]="project.githubUrl" target="_blank"><i class="fab fa-github"></i></a>
+            <a [href]="project.liveUrl" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-image">
+          <a [href]="project.liveUrl" target="_blank">
+            <div class="img-container">
+              <img [src]="project.image" [alt]="project.title">
+              <div class="img-overlay"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-projects">
+      <button class="btn-ghost">View Full Archive</button>
+    </div>
   </div>
 </section>
-

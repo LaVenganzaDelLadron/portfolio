@@ -1,15 +1,41 @@
-import { Component, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-section-title',
   standalone: true,
-  templateUrl: './section-title.component.html',
-  styleUrl: './section-title.component.scss',
+  imports: [CommonModule],
+  template: `
+    <h2 class="section-title">
+      <span class="number">{{ number }}.</span>
+      <span class="text-gradient">{{ title }}</span>
+      <div class="line"></div>
+    </h2>
+  `,
+  styles: [`
+    @import 'variables';
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 2.5rem;
+      white-space: nowrap;
+    }
+    .number {
+      color: $color-neon-green;
+      font-family: $font-mono;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+    .line {
+      height: 1px;
+      background: $border-color;
+      width: 100%;
+      max-width: 300px;
+    }
+  `]
 })
 export class SectionTitleComponent {
-  // Avoid template interpolation placeholders; plain string inputs.
-  title = input.required<string>();
-  subtitle = input<string>('');
+  @Input() number = '';
+  @Input() title = '';
 }
-
-

@@ -1,20 +1,45 @@
-<section class="container" aria-label="About" id="about">
-  <app-section-title title="About" subtitle="A cyber-themed portfolio shell built with Angular SSR + routing." />
+<section class="about section-padding">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="assets/images/profile.jpg" alt="Profile">
+          <div class="image-overlay"></div>
+          <div class="frame frame-1"></div>
+          <div class="frame frame-2"></div>
+        </div>
+      </div>
 
-  <div class="grid">
-    <div class="panel">
-      <h3>Mission</h3>
-      <p>
-        Ship clean interfaces that feel like a terminal: fast, responsive, and grounded in good architecture.
-      </p>
-    </div>
+      <div class="about-info">
+        <app-section-title number="01" title="About Me"></app-section-title>
+        <div class="about-text">
+          <p>
+            Hello! I'm Argus, a developer and security researcher passionate about creating
+            tools that make the internet a safer place. My journey in tech started with
+            curiosity about how systems could be bypassed, which naturally evolved into
+            a career focused on how to build them better.
+          </p>
+          <p>
+            Fast-forward to today, I've had the privilege of working with a
+            <span class="highlight">cybersecurity startup</span>, a
+            <span class="highlight">fintech giant</span>, and as a
+            <span class="highlight">freelance consultant</span>. My main focus these
+            days is building secure, high-performance web applications and
+            architecting cloud infrastructure.
+          </p>
+          <p>
+            I thrive at the intersection of development and security, ensuring that
+            every line of code I write is not only functional but resilient.
+          </p>
+        </div>
 
-    <div class="panel">
-      <h3>Approach</h3>
-      <p>
-        Component-based UI, reusable shared pieces, and typed sample data for consistent rendering.
-      </p>
+        <div class="stats-grid">
+          <div class="stat-card" *ngFor="let stat of stats">
+            <h3 class="stat-value text-gradient">{{ stat.value }}</h3>
+            <p class="stat-label">{{ stat.label }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-

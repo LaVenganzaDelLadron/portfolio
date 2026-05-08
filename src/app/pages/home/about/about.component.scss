@@ -1,6 +1,117 @@
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.panel{padding:1.2rem;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(0,217,255,.14);}
-.panel h3{margin:0;font-size:1.05rem;}
-.panel p{margin:.6rem 0 0;color:rgba(230,237,243,.72);line-height:1.6;}
-@media(max-width:760px){.grid{grid-template-columns:1fr;}}
+@import 'variables';
+@import 'mixins';
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include responsive(lg) {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.about-image {
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include responsive(lg) {
+    margin: 0;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: 4px;
+    filter: grayscale(100%) contrast(1.2);
+    transition: $transition-smooth;
+    z-index: 1;
+    position: relative;
+  }
+
+  &:hover img {
+    filter: none;
+    transform: translate(-5px, -5px);
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba($color-neon-green, 0.2);
+    border-radius: 4px;
+    z-index: 2;
+    transition: $transition-smooth;
+    pointer-events: none;
+  }
+
+  &:hover .image-overlay {
+    opacity: 0;
+  }
+
+  .frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color-neon-green;
+    border-radius: 4px;
+    z-index: 0;
+    transition: $transition-smooth;
+  }
+
+  .frame-1 {
+    top: 20px;
+    left: 20px;
+  }
+
+  &:hover .frame-1 {
+    top: 15px;
+    left: 15px;
+  }
+}
+
+.about-text {
+  color: $text-secondary;
+  margin-bottom: 3rem;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: $color-neon-green;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @include responsive(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  @include glassmorphism;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.03);
+
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
