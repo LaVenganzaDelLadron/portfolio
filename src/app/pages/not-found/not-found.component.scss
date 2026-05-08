@@ -1,0 +1,33 @@
+.not-found {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #00ff99;
+  text-shadow: 0 0 24px rgba(0, 255, 153, 0.22);
+}
+
+.muted {
+  margin-top: 0.75rem;
+  color: rgba(230, 237, 243, 0.72);
+}
+
+.btn {
+  display: inline-flex;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid rgba(0, 217, 255, 0.22);
+  color: var(--text);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 26px rgba(0, 217, 255, 0.16);
+}
+

@@ -1,0 +1,8 @@
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.skill{padding:1.1rem;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(0,255,153,.14);transition:transform 160ms ease, box-shadow 160ms ease;}
+.skill:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(0,255,153,.10);}
+.name{font-weight:800;}
+.level{margin-top:.4rem;color:rgba(0,217,255,.95);font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;}
+@media(max-width:920px){.skills{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.skills{grid-template-columns:1fr;}}
+

@@ -1,0 +1,27 @@
+.details {
+  padding-top: 2.5rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  letter-spacing: 0.02em;
+}
+
+.muted {
+  color: rgba(230, 237, 243, 0.72);
+}
+
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  color: #00ff99;
+}
+
+.panel {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 217, 255, 0.18);
+}
+

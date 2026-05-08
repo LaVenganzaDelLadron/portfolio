@@ -1,0 +1,6 @@
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.panel{padding:1.2rem;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(0,217,255,.14);}
+.panel h3{margin:0;font-size:1.05rem;}
+.panel p{margin:.6rem 0 0;color:rgba(230,237,243,.72);line-height:1.6;}
+@media(max-width:760px){.grid{grid-template-columns:1fr;}}
+

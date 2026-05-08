@@ -1,0 +1,13 @@
+<section class="container" aria-label="Skills" id="skills">
+  <app-section-title title="Skills" subtitle="A mix of frontend engineering and security-aware thinking." />
+
+  <div class="skills">
+    @for (s of skills; track s.name) {
+      <div class="skill">
+        <div class="name">{{ s.name }}</div>
+        <div class="level">{{ s.level }}</div>
+      </div>
+    }
+  </div>
+</section>
+

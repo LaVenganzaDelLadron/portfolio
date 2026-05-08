@@ -1,0 +1,10 @@
+<section class="container" aria-label="Projects" id="projects">
+  <app-section-title title="Projects" subtitle="Hover for neon glow. Click to open the details route." />
+
+  <div class="grid">
+    @for (p of projects; track p.id) {
+      <app-project-card [project]="p"></app-project-card>
+    }
+  </div>
+</section>
+

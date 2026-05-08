@@ -1,0 +1,50 @@
+.footer {
+  padding: 2.5rem 0 3.2rem;
+  border-top: 1px solid rgba(0, 217, 255, 0.14);
+  background: rgba(13, 17, 23, 0.4);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.tag {
+  margin-top: 0.35rem;
+  color: rgba(230, 237, 243, 0.72);
+}
+
+.right {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 217, 255, 0.18);
+  background: rgba(0, 217, 255, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.14);
+  border-color: rgba(0, 255, 153, 0.22);
+}
+
+@media (max-width: 760px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .right { justify-content: flex-start; }
+}
+

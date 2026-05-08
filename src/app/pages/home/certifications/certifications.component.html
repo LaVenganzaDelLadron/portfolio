@@ -1,0 +1,19 @@
+<section class="container" aria-label="Certifications" id="certifications">
+  <app-section-title title="Certifications" subtitle="Sample certifications (replace with your real credentials)." />
+
+  <div class="list">
+    @for (c of certificates; track c.name) {
+      <div class="item">
+        <div class="top">
+          <h3>{{ c.name }}</h3>
+          <span class="year">{{ c.year }}</span>
+        </div>
+        <div class="issuer">{{ c.issuer }}</div>
+        @if (c.detail) {
+          <p class="detail">{{ c.detail }}</p>
+        }
+      </div>
+    }
+  </div>
+</section>
+

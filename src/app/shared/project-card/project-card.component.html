@@ -1,0 +1,27 @@
+<article class="card" [attr.aria-label]="project().name">
+  <div class="media">
+    <img [src]="project().image" [alt]="project().name" loading="lazy" />
+    <div class="overlay" aria-hidden="true"></div>
+  </div>
+
+  <div class="body">
+    <div class="row">
+      <h3>{{ project().name }}</h3>
+      <span class="badge">{{ project().type }}</span>
+    </div>
+
+    <p class="desc">{{ project().summary }}</p>
+
+    <div class="tech">
+      @for (tech of project().tech; track tech) {
+        <span class="tag">{{ tech }}</span>
+      }
+    </div>
+
+    <div class="actions">
+      <a class="link" [routerLink]="['/projects', project().id]">View</a>
+      <a class="link" [href]="project().repoUrl" target="_blank" rel="noopener">Repo</a>
+    </div>
+  </div>
+</article>
+
