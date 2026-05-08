@@ -15,8 +15,7 @@ interface BugBountyProgram {
   selector: 'app-bug-bounty',
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
-  templateUrl: './bug-bounty.component.html',
-  styleUrls: ['./bug-bounty.component.scss']
+  templateUrl: './bug-bounty.component.html'
 })
 export class BugBountyComponent {
   programs: BugBountyProgram[] = [

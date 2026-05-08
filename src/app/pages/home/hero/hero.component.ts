@@ -7,7 +7,6 @@ import { fadeInUpAnimation } from '../../../animations/fade.animation';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss'],
   animations: [fadeInUpAnimation]
 })
 export class HeroComponent implements OnInit {

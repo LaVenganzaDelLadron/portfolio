@@ -23,22 +23,6 @@ import { ContactComponent } from './contact/contact.component';
     CertificationsComponent,
     ContactComponent
   ],
-  template: `
-    <main>
-      <app-hero id="home"></app-hero>
-      <app-about id="about"></app-about>
-      <app-skills id="skills"></app-skills>
-      <app-projects id="projects"></app-projects>
-      <app-bug-bounty id="bug-bounty"></app-bug-bounty>
-      <app-experience id="experience"></app-experience>
-      <app-certifications id="certifications"></app-certifications>
-      <app-contact id="contact"></app-contact>
-    </main>
-  `,
-  styles: [`
-    main {
-      width: 100%;
-    }
-  `]
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {}

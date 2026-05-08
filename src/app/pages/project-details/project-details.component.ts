@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.scss',
 })
 export class ProjectDetailsPageComponent {
   projectId: string | null;
@@ -16,4 +15,3 @@ export class ProjectDetailsPageComponent {
     this.projectId = this.route.snapshot.paramMap.get('id');
   }
 }
-

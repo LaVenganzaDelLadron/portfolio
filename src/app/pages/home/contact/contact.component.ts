@@ -7,8 +7,7 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, FormsModule, SectionTitleComponent],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  templateUrl: './contact.component.html'
 })
 export class ContactComponent {
   formData = {

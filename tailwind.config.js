@@ -1,9 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    screens: {
+      xs: '420px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         background: '#0d1117',
@@ -20,11 +29,16 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
+        'fade-in': 'fadeIn 0.45s ease-out both',
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'glow': 'glow 2s infinite',
         'morph': 'morph 15s linear infinite',
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },

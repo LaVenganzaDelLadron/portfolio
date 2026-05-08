@@ -9,7 +9,6 @@ import { Certificate } from '../../../core/models/certificate.model';
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.scss'],
 })
 export class CertificationsComponent implements OnInit {
   certificates: Certificate[] = [];

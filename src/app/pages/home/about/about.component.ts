@@ -6,8 +6,7 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
   stats = [

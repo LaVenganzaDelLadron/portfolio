@@ -11,7 +11,6 @@ import { staggerFadeInAnimation } from '../../../animations/fade.animation';
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
   animations: [staggerFadeInAnimation]
 })
 export class SkillsComponent {

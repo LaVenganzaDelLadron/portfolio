@@ -8,8 +8,7 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
   selector: 'app-experience',
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  templateUrl: './experience.component.html'
 })
 export class ExperienceComponent {
   experiences: Experience[] = EXPERIENCES;

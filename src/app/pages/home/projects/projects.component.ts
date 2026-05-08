@@ -8,8 +8,7 @@ import { SectionTitleComponent } from '../../../shared/section-title/section-tit
   selector: 'app-projects',
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  templateUrl: './projects.component.html'
 })
 export class ProjectsComponent {
   projects: Project[] = PROJECTS;

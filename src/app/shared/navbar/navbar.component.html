@@ -12,10 +12,11 @@
         <a [routerLink]="link.path" [fragment]="link.fragment"
            routerLinkActive="text-primary"
            [routerLinkActiveOptions]="{exact: true}"
+           #rla="routerLinkActive"
            class="text-text-secondary text-[0.85rem] font-medium uppercase tracking-[1.5px] relative py-2 transition-colors hover:text-primary group">
           {{ link.name }}
           <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 shadow-[0_0_8px_#00ff99] group-hover:w-full"
-                [ngClass]="{'w-full': rla.isActive}" #rla="routerLinkActive"></span>
+                [ngClass]="{'w-full': rla.isActive}"></span>
         </a>
       </li>
     </ul>
