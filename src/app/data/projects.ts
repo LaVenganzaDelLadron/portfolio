@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     title: 'HadesEye - Malware Analyzer',
-    description: 'HadesEye is a mobile spyware malware that secretly collects sensitive user and device data in the background and may transmit it to remote servers without the user’s consent.',
+    description: 'HadesEye is a mobile malware analyzer that can scan a domain, website, IP address or files (apk, exe, pdf, etc).',
     image: 'assets/images/project/hades.jpeg',
     technologies: ['Python', 'Kotlin', 'Firebase', 'VirusTotal', 'HybridAnalysis', 'URLScan'],
     githubUrl: 'https://github.com/LaVenganzaDelLadron/HadesEye',
