@@ -72,6 +72,30 @@ export class BugBountyComponent {
       description: 'Performed security testing on JPConnect, focusing on API security and NoSQL injection vulnerabilities.',
       featured: true
     },
+    {
+      id: 5,
+      name: 'DOLE Job Fair',
+      image: 'assets/images/bugbounty/dole.png',
+      severity: 'Critical',
+      vulnsFound: 12,
+      totalRewards: '$5,200',
+      icon: 'fas fa-bug',
+      focus: 'Critical web vulnerability disclosure',
+      description: 'DOLE Job Fair has critical OTP exposure and source code leaked allowing an attacker to make time to exploit the system.',
+      featured: true
+    },
+    {
+      id: 6,
+      name: 'EMIS',
+      image: 'assets/images/bugbounty/emis.png',
+      severity: 'Critical',
+      vulnsFound: 12,
+      totalRewards: '$5,200',
+      icon: 'fas fa-bug',
+      focus: 'Critical web vulnerability disclosure',
+      description: 'EMIS API has critical IDOR and account modification.',
+      featured: true
+    },
   ];
 
   get featuredPrograms(): BugBountyProgram[] {
