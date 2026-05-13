@@ -3,19 +3,26 @@
     <app-section-title number="06" title="Certifications"></app-section-title>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <div class="bg-surface/40 border border-white/5 rounded-[20px] p-6 flex gap-5 items-center transition-all duration-300 backdrop-blur-md hover:-translate-y-2 hover:bg-surface/70 hover:border-primary/30 hover:shadow-[0_15px_35px_-15px_rgba(0,0,0,0.5)] group"
+      <article class="bg-surface/40 border border-white/5 rounded-[20px] p-5 flex flex-col transition-all duration-300 backdrop-blur-md hover:-translate-y-2 hover:bg-surface/70 hover:border-primary/30 hover:shadow-[0_15px_35px_-15px_rgba(0,0,0,0.5)] group"
            *ngFor="let cert of certificates">
-        <div class="w-[50px] h-[50px] min-w-[50px] bg-white/5 rounded-[20px] flex items-center justify-center text-[1.25rem] text-text-secondary transition-all duration-300 group-hover:bg-primary/10 group-hover:text-primary group-hover:scale-110">
-          <i class="fas fa-certificate"></i>
+        <div class="relative mb-5 flex h-44 items-center justify-center overflow-hidden rounded-[16px] border border-white/5 bg-background/60">
+          <div class="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] [background-size:20px_20px]"></div>
+          <i class="fas fa-certificate text-5xl text-text-secondary/30 transition-colors group-hover:text-primary/30"></i>
+          <img
+            [src]="cert.image"
+            [alt]="cert.name"
+            (error)="onCertificateImageError($event)"
+            class="absolute inset-0 h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+          />
         </div>
-        <div class="grow">
+        <div class="flex grow flex-col">
           <h3 class="text-[1.05rem] font-bold mb-1 text-text-primary transition-colors group-hover:text-primary">{{ cert.name }}</h3>
-          <p class="text-[0.8rem] text-text-secondary mb-3 opacity-80">{{ cert.issuer }} • {{ cert.date }}</p>
-          <a [href]="cert.url" target="_blank" class="text-[0.75rem] text-primary font-bold uppercase tracking-wider inline-flex items-center gap-2 transition-all hover:tracking-widest hover:opacity-80">
+          <p class="text-[0.8rem] text-text-secondary mb-5 opacity-80">{{ cert.issuer }} • {{ cert.date }}</p>
+          <a [href]="cert.url" target="_blank" class="mt-auto text-[0.75rem] text-primary font-bold uppercase tracking-wider inline-flex items-center gap-2 transition-all hover:tracking-widest hover:opacity-80">
             View Credential <i class="fas fa-external-link-alt text-[0.7rem]"></i>
           </a>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

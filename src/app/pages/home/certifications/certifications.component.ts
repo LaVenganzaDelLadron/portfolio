@@ -18,4 +18,9 @@ export class CertificationsComponent implements OnInit {
   ngOnInit(): void {
     this.certificates = this.dataService.getCertificates();
   }
+
+  onCertificateImageError(event: Event): void {
+    const image = event.target as HTMLImageElement;
+    image.style.display = 'none';
+  }
 }

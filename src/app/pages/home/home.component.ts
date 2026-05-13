@@ -4,6 +4,7 @@ import { HeroComponent } from './hero/hero.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BugBountyComponent } from './bug-bounty/bug-bounty.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +14,9 @@ import { BugBountyComponent } from './bug-bounty/bug-bounty.component';
     HeroComponent,
     BugBountyComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    CertificationsComponent
   ],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {}
-
