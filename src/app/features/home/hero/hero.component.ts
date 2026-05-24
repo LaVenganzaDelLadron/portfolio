@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { fadeInUpAnimation } from '../../../animations/fade.animation';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './hero.component.html',
   animations: [fadeInUpAnimation]
 })
@@ -35,27 +36,35 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private animateIdentityText() {
-    const currentText = this.identityTexts[this.phraseIndex];
-    const nextCharacterIndex = this.isDeleting
-      ? this.characterIndex - 1
-      : this.characterIndex + 1;
+    const current = this.identityTexts[this.phraseIndex];
 
-    this.characterIndex = nextCharacterIndex;
-    this.displayText = currentText.slice(0, this.characterIndex);
+    if (!this.isDeleting) {
+      this.displayText = current.substring(0, this.characterIndex + 1);
+      this.characterIndex++;
 
-    let delay = this.isDeleting ? 52 : 88;
+      if (this.characterIndex === current.length) {
+        this.isDeleting = true;
 
-    if (!this.isDeleting && this.displayText === currentText) {
-      delay = 1650;
-      this.isDeleting = true;
+        this.timeoutId = setTimeout(() => {
+          this.animateIdentityText();
+        }, 1800);
+
+        return;
+      }
+    } else {
+      this.displayText = current.substring(0, this.characterIndex - 1);
+      this.characterIndex--;
+
+      if (this.characterIndex === 0) {
+        this.isDeleting = false;
+        this.phraseIndex =
+          (this.phraseIndex + 1) % this.identityTexts.length;
+      }
     }
 
-    if (this.isDeleting && this.displayText === '') {
-      this.isDeleting = false;
-      this.phraseIndex = (this.phraseIndex + 1) % this.identityTexts.length;
-      delay = 280;
-    }
-
-    this.timeoutId = setTimeout(() => this.animateIdentityText(), delay);
+    this.timeoutId = setTimeout(
+      () => this.animateIdentityText(),
+      this.isDeleting ? 40 : 85
+    );
   }
 }

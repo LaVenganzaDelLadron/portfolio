@@ -1,103 +1,90 @@
-<section id="hero" class="bg-[#0d1117] py-24 px-6 sm:px-12 lg:px-24">
-  <div class="container mx-auto max-w-6xl">
+<section id="hero" class="bg-background/90 py-24 px-6 sm:px-10 lg:px-16">
+  <div class="container mx-auto max-w-7xl">
+    <div class="grid gap-10 lg:grid-cols-[minmax(300px,38%)_1fr] items-start">
 
-    <!-- Section Header -->
-    <div class="mb-12">
-      <h2 class="text-[#8b949e] font-mono text-sm uppercase tracking-[0.2em]">Profile</h2>
-    </div>
+      <div class="terminal-panel" @fadeInUp>
+        <div class="panel-header">
+          <span>MODULE 01</span>
+          <span class="text-secondary">STATUS: LIVE</span>
+        </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-      <!-- Left Column: Quick Summary Card -->
-      <div class="lg:col-span-5" @fadeInUp>
-        <div class="relative group">
-          <!-- Enhanced Glow Effect for larger image -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-10 blur-2xl group-hover:opacity-25 transition duration-1000"></div>
-
-          <div class="relative bg-[#161b22] border border-white/5 rounded-[24px] p-10 backdrop-blur-sm shadow-2xl">
-            <div class="flex flex-col items-center text-center">
-              <!-- UPDATED: Increased from h-32/w-32 to h-48/w-48 (and made it responsive) -->
-              <div class="relative mb-8">
-                <img
-                  src="assets/images/profile/profile3.png"
-                  alt="Elton John Justaga"
-                  class="h-56 w-56 sm:h-64 sm:w-64 lg:h-72 lg:w-72 rounded-[24px] object-cover border border-white/10 transition-all duration-700 shadow-inner hover:scale-105"
-                />
-                <!-- Subtle corner accents for a "tech" feel -->
-                <div class="absolute -top-2 -right-2 h-6 w-6 border-t-2 border-r-2 border-primary/30 rounded-tr-lg"></div>
-                <div class="absolute -bottom-2 -left-2 h-6 w-6 border-b-2 border-l-2 border-secondary/30 rounded-bl-lg"></div>
-              </div>
-
-              <h3 class="text-4xl font-bold text-[#f0f6fc] tracking-tight">Elton John Justaga</h3>
-              <p class="text-secondary font-mono text-xl mt-2 tracking-wide">Security Researcher & Developer</p>
-
-              <hr class="w-full border-white/5 my-8">
-
-              <p class="text-[#8b949e] text-base leading-relaxed px-2">
-                "I don’t just code systems—I test their boundaries, learn their flaws, and refine them into something better."
-              </p>
+        <div class="space-y-7">
+          <div class="grid gap-5 rounded-[28px] border border-white/10 bg-surface/80 p-6 text-center">
+            <img
+              src="assets/images/profile/profile2.jpg"
+              alt="Elton John Justaga"
+              class="mx-auto h-56 w-56 sm:h-64 sm:w-64 rounded-[28px] object-cover border border-white/10 transition-all duration-700 hover:scale-105"
+            />
+            <div class="space-y-2">
+              <div class="text-[0.7rem] uppercase tracking-[0.35em] text-primary/80">AGENT DARKGLITCH</div>
+              <h1 class="text-3xl sm:text-4xl font-bold text-text-primary">I build secure systems and hunt hidden flaws.</h1>
+              <p class="text-text-secondary leading-relaxed">Security research, bug bounty hunting, and resilient application design with a hacker mindset.</p>
             </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="terminal-tag">Bug Bounty Hunter</div>
+            <div class="terminal-tag">Pentest Learner</div>
+            <div class="terminal-tag">Backend Developer</div>
+            <div class="terminal-tag">Android Developer</div>
+          </div>
+
+          <div class="grid gap-3">
+            <a [routerLink]="'/'" [fragment]="'projects'" class="btn-primary text-center w-full">View projects</a>
+            <a [routerLink]="'/'" [fragment]="'contact'" class="btn-outline text-center w-full">Contact me</a>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Details & Roles -->
-      <div class="lg:col-span-7 pt-4 space-y-10" @fadeInUp>
+      <div class="space-y-8" @fadeInUp>
+        <div class="terminal-panel">
+          <div class="panel-header">
+            <span>INIT</span>
+            <span class="text-secondary">SECURE MODE</span>
+          </div>
 
-        <!-- Intro -->
-        <div>
-          <p class="text-2xl sm:text-3xl text-[#f0f6fc] leading-[1.2] font-semibold tracking-tight">
-            I am a <span class="text-primary">cybersecurity enthusiast</span> and developer focused on building secure systems and analyzing vulnerabilities.
-          </p>
+          <p class="text-3xl sm:text-4xl font-semibold leading-tight text-text-primary">I design secure experiences, analyze vulnerabilities, and turn found weaknesses into working defenses.</p>
+
+          <div class="hero-code mt-8">
+            <div class="flex items-center gap-2 text-primary/80 uppercase tracking-[0.28em] mb-4">
+              <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+              SYSTEM OUTPUT
+            </div>
+            <p class="whitespace-pre-wrap">
+  > {{ displayText }}<span class="cursor">|</span>
+</p>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="terminal-tag">Security Research</div>
+            <div class="terminal-tag">Responsible Disclosure</div>
+            <div class="terminal-tag">Realtime Analysis</div>
+            <div class="terminal-tag">Secure Architecture</div>
+          </div>
         </div>
 
-        <!-- Role Badges -->
-        <div class="flex flex-wrap gap-3">
-          <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-[#f0f6fc] text-ml font-semibold tracking-wide hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-default">
-            Cyber Security Enthusiast
-          </span>
-          <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-[#f0f6fc] text-ml font-semibold tracking-wide hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-default">
-            Security Researcher
-          </span>
-          <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-[#f0f6fc] text-ml font-semibold tracking-wide hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-default">
-            Bug Bounty Hunter
-          </span>
-          <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-[#f0f6fc] text-ml font-semibold tracking-wide hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-300 cursor-default">
-            Backend Developer
-          </span>
-          <span class="px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-[#f0f6fc] text-ml font-semibold tracking-wide hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-300 cursor-default">
-            Android Developer
-          </span>
-        </div>
-
-        <!-- Key Highlights -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
-          <ul class="space-y-5">
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 h-2 w-2 rounded-sm rotate-45 border border-primary group-hover:bg-primary transition-all"></span>
-              <span class="text-[#8b949e] text-sm leading-relaxed group-hover:text-[#f0f6fc] transition-colors">Focused on bug bounty research</span>
+        <div class="terminal-panel hidden lg:block">
+          <div class="panel-header">
+            <span>NOTES</span>
+            <span class="text-secondary">READOUT</span>
+          </div>
+          <ul class="space-y-4 text-text-secondary text-sm">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+              Focused on web and mobile security with practical research output.
             </li>
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 h-2 w-2 rounded-sm rotate-45 border border-primary group-hover:bg-primary transition-all"></span>
-              <span class="text-[#8b949e] text-sm leading-relaxed group-hover:text-[#f0f6fc] transition-colors">Passion for web application security</span>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+              Built with clean responsive layouts and minimal terminal-inspired UI.
             </li>
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 h-2 w-2 rounded-sm rotate-45 border border-primary group-hover:bg-primary transition-all"></span>
-              <span class="text-[#8b949e] text-sm leading-relaxed group-hover:text-[#f0f6fc] transition-colors">Hands-on vulnerability testing</span>
-            </li>
-          </ul>
-          <ul class="space-y-5">
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 h-2 w-2 rounded-sm rotate-45 border border-secondary group-hover:bg-secondary transition-all"></span>
-              <span class="text-[#8b949e] text-sm leading-relaxed group-hover:text-[#f0f6fc] transition-colors">Backend & Android experience</span>
-            </li>
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 h-2 w-2 rounded-sm rotate-45 border border-secondary group-hover:bg-secondary transition-all"></span>
-              <span class="text-[#8b949e] text-sm leading-relaxed group-hover:text-[#f0f6fc] transition-colors">Building secure, scalable systems</span>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>
+              Every section is designed to look crisp on mobile and desktop.
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>

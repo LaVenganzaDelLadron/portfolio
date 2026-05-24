@@ -7,9 +7,10 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class="mb-10 md:mb-12">
-      <div class="mb-3 flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[2px] text-primary/80">
+      <div class="mb-3 flex flex-wrap items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.35em] text-primary/80">
+        <span class="text-secondary">&gt; SYS</span>
+        <span class="h-px flex-1 bg-gradient-to-r from-primary/70 via-transparent to-secondary/70"></span>
         <span>{{ number }}</span>
-        <span class="h-px w-8 bg-primary/30"></span>
       </div>
       <h2 class="max-w-3xl text-[clamp(2rem,5vw,3rem)] font-extrabold tracking-tight text-text-primary">
         {{ title }}
