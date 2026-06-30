@@ -1,0 +1,37 @@
+import './BugBounty.css';
+import Card from '../../components/Card/Card';
+import Reveal from '../../components/Reveal/Reveal';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import { bugBountyReports } from '../../data/content';
+
+export default function Bugbounty() {
+  return (
+    <section id="bug-bounty" className="section bounty-section">
+      <div className="section-inner">
+        <SectionTitle
+          eyebrow="Bug Bounty"
+          title="Security reports and responsible disclosure"
+          description="A short timeline of findings and the impact they helped improve."
+        />
+
+        <div className="bounty-list">
+          {bugBountyReports.map((item) => (
+            <Reveal key={item.platform}>
+              <Card className="bounty-card">
+                <div className="bounty-card__main">
+                  <div className="bounty-card__title-row">
+                    <p className="bounty-card__platform">{item.platform}</p>
+                    <span className="bounty-card__severity">{item.severity}</span>
+                  </div>
+                  <p className="bounty-card__date">{item.date}</p>
+                  <p className="bounty-card__description">{item.description}</p>
+                </div>
+                <div className="bounty-card__reward">Reward {item.reward}</div>
+              </Card>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

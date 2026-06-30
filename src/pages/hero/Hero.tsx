@@ -1,42 +1,60 @@
-import { useState } from 'react'
+import './Hero.css';
+import Button from '../../components/Button/Button';
+import Reveal from '../../components/Reveal/Reveal';
+import profileImage from '../../assets/images/profile/profile.jpeg';
+import { heroStats, socialLinks } from '../../data/content';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-neutral-950 text-white px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-cyan-400 font-medium mb-3">
-          👋 Hello, I'm
-        </p>
+    <section id="home" className="hero-section">
+      <div className="hero-grid">
+        <Reveal className="hero-copy">
+          <div className="hero-badge">Full Stack Developer • Cybersecurity Enthusiast</div>
+          <h1>
+            Hey, I&apos;m <span>Dark Glitch</span>
+          </h1>
+          <p>
+            I build polished digital products and resilient systems with a strong focus on user experience, scalable architecture, and secure engineering.
+          </p>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-          Dark Glitch
-        </h1>
+          <div className="hero-actions">
+            <Button href="#projects">View Projects</Button>
+            <Button href="#contact" variant="secondary">Contact Me</Button>
+          </div>
 
-        <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">
-          Full Stack Developer & Cybersecurity Enthusiast
-        </h2>
+          <div className="hero-socials">
+            {socialLinks.map((link) => (
+              <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="hero-social">
+                {link.label}
+              </a>
+            ))}
+          </div>
 
-        <p className="text-gray-400 text-lg leading-8 max-w-2xl mx-auto mb-10">
-          I build modern web applications, IoT systems, and security-focused
-          software using React, FastAPI, Python, Java, and Linux. I enjoy
-          creating clean, fast, and user-friendly experiences.
-        </p>
+          <div className="hero-stats">
+            {heroStats.map((stat) => (
+              <div key={stat.label} className="hero-stat">
+                <p className="hero-stat__value">{stat.value}</p>
+                <p className="hero-stat__label">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
 
-        <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="#projects"
-            className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 transition font-semibold"
-          >
-            View Projects
-          </a>
-
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-xl border border-gray-600 hover:border-cyan-400 hover:text-cyan-400 transition font-semibold"
-          >
-            Contact Me
-          </a>
-        </div>
+        <Reveal className="hero-visual">
+          <div className="hero-card">
+            <div className="hero-card__window">
+              <span /><span /><span />
+            </div>
+            <div className="hero-card__content">
+              <img src={profileImage} alt="Portrait of the portfolio owner" />
+              <div className="hero-card__panel">
+                <p className="hero-panel__eyebrow">Currently crafting</p>
+                <h3>Secure, modern products</h3>
+                <p>React • TypeScript • Node.js • Python</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
