@@ -3,7 +3,6 @@ import Card from '../../components/Card/Card';
 import Reveal from '../../components/Reveal/Reveal';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import { bugBountyReports } from '../../data/content';
-import securityReportImage from '../../assets/images/bugbounty/security-report.svg';
 
 export default function Bugbounty() {
   return (
@@ -15,28 +14,19 @@ export default function Bugbounty() {
           description="A short timeline of findings and the impact they helped improve."
         />
 
-        <div className="bounty-hero">
-          <img
-            src={securityReportImage}
-            alt="Security reports and responsible disclosure illustration"
-            className="bounty-hero__image"
-          />
-        </div>
-
-        <div className="bounty-list">
+        <div className="bounty-grid">
           {bugBountyReports.map((item) => (
             <Reveal key={item.platform}>
               <Card className="bounty-card">
                 <img src={item.image} alt={`${item.platform} logo`} className="bounty-card__image" />
-                <div className="bounty-card__main">
-                  <div className="bounty-card__title-row">
-                    <p className="bounty-card__platform">{item.platform}</p>
+                <div className="bounty-card__body">
+                  <div className="bounty-card__header">
+                    <h3>{item.platform}</h3>
                     <span className="bounty-card__severity">{item.severity}</span>
                   </div>
-                  <p className="bounty-card__date">{item.date}</p>
                   <p className="bounty-card__description">{item.description}</p>
+                  <div className="bounty-card__reward">Reward {item.reward}</div>
                 </div>
-                <div className="bounty-card__reward">Reward {item.reward}</div>
               </Card>
             </Reveal>
           ))}

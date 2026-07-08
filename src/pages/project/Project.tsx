@@ -11,7 +11,7 @@ export default function Project() {
       <div className="section-inner">
         <SectionTitle
           eyebrow="Projects"
-          title="Selected work with thoughtful interfaces"
+          title="Selected work that can understand the behaviour of the system and the network."
           description="These builds focus on clarity, performance, and maintainable code while balancing product polish with technical depth."
         />
 
@@ -30,7 +30,6 @@ export default function Project() {
                   </div>
                   <div className="project-card__actions">
                     <Button href={project.github} external variant="secondary">GitHub</Button>
-                    <Button href={project.demo} external>Live Demo</Button>
                   </div>
                 </div>
               </Card>

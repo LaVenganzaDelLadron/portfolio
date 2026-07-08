@@ -50,12 +50,10 @@ export const backgroundItems = [
 ];
 
 export const skills = [
-  { category: 'Frontend', items: [{ name: 'React', level: 92 }, { name: 'TypeScript', level: 88 }, { name: 'Tailwind CSS', level: 90 }] },
   { category: 'Backend', items: [{ name: 'Node.js', level: 84 }, { name: 'FastAPI', level: 86 }, { name: 'SQL', level: 80 }] },
-  { category: 'Mobile', items: [{ name: 'Flutter', level: 76 }, { name: 'React Native', level: 72 }] },
   { category: 'Languages', items: [{ name: 'Python', level: 90 }, { name: 'Java', level: 82 }, { name: 'C++', level: 78 }] },
   { category: 'Platform', items: [{ name: 'Docker', level: 84 }, { name: 'Linux', level: 90 }, { name: 'Git', level: 92 }] },
-  { category: 'Security', items: [{ name: 'Cybersecurity', level: 88 }, { name: 'IoT', level: 74 }] }
+  { category: 'Security', items: [{ name: 'Cybersecurity', level: 88 }] }
 ];
 
 export const projects = [
@@ -64,7 +62,7 @@ export const projects = [
     description: 'A type of script of python to understand the command execution through network and the system.',
     image: projectOne,
     tech: ['Python'],
-    github: 'https://github.com',
+    github: 'https://github.com/LaVenganzaDelLadron/reverseShell.git',
     demo: 'https://example.com'
   },
   {
@@ -72,7 +70,7 @@ export const projects = [
     description: 'A polished portfolio and content platform designed with a minimal visual language and fast interactions.',
     image: projectTwo,
     tech: ['Python', 'Kotlin', 'Chaquopy'],
-    github: 'https://github.com',
+    github: 'https://github.com/LaVenganzaDelLadron/HadesEye.git',
     demo: 'https://example.com'
   },
   {
@@ -80,7 +78,7 @@ export const projects = [
     description: 'A kind of custom personal malware project that can spy on a system, exfiltrate data, and perform remote commands. Built for educational purposes.',
     image: projectThree,
     tech: ['webrtc', 'aiortc', 'Python'],
-    github: 'https://github.com',
+    github: 'https://github.com/LaVenganzaDelLadron/darkglitch.git',
     demo: 'https://example.com'
   }
 ];
@@ -121,65 +119,57 @@ export const certificates = [
 export const bugBountyReports = [
   {
     platform: 'Ad Astra',
-    severity: 'High',
-    date: '2024-03',
-    description: 'Reported a privilege escalation gap in an internal administration flow and helped harden the access control path.',
+    severity: 'Medium',
+    description: 'Identified an authorization weakness within an administrative workflow that could allow access to student records beyond intended permission levels. Reported the issue through responsible disclosure, enabling corrective access-control improvements.',
     reward: '$600',
     image: adAstraImage
   },
   {
     platform: 'JP Connect',
     severity: 'Medium',
-    date: '2024-01',
-    description: 'Identified a client-side validation bypass that could overwrite account settings under specific conditions.',
+    description: 'Discovered improper access controls affecting academic and administrative information, including student disciplinary records and scheduling data. Provided remediation recommendations to strengthen data protection measures.',
     reward: '$250',
     image: jpConnectImage
   },
   {
     platform: 'Wemis',
-    severity: 'Low',
-    date: '2023-11',
-    description: 'Shared a security improvement suggestion around session handling and endpoint exposure.',
+    severity: 'Critical',
+    description: 'Reported multiple security concerns related to session management and API security that could impact the confidentiality and integrity of user information. Collaborated through responsible disclosure to support remediation efforts.',
     reward: '$120',
     image: wemisImage
   },
   {
-    platform: 'DOLE',
+    platform: 'DOLE Job Fair',
     severity: 'High',
-    date: '2024-02',
-    description: 'Found an authentication bypass in the user account recovery mechanism that could lead to unauthorized access.',
+    description: 'Identified information disclosure issues within authentication-related processes that exposed internal application details through error responses. Submitted findings and recommendations to reduce potential attack surface and improve secure error handling.',
     reward: '$500',
     image: doleImage
   },
   {
     platform: 'EMIS',
-    severity: 'Medium',
-    date: '2023-12',
-    description: 'Discovered a stored XSS vulnerability in the reporting module that could execute arbitrary scripts.',
+    severity: 'High',
+    description: 'Discovered API security weaknesses that could expose sensitive user information to unauthorized parties. Reported the findings and provided recommendations to enhance access controls and data protection.',
     reward: '$350',
     image: emisImage
   },
   {
     platform: 'HRIS',
     severity: 'High',
-    date: '2023-10',
-    description: 'Identified SQL injection in employee data search functionality that could expose sensitive HR information.',
+    description: 'Identified unauthorized access risks affecting employee-related API endpoints. Responsible disclosure helped strengthen security controls protecting personnel and operational data.',
     reward: '$750',
     image: hrisImage
   },
   {
     platform: 'Job Portal',
-    severity: 'Medium',
-    date: '2023-09',
-    description: 'Found insecure file upload that allowed arbitrary file upload without proper validation.',
+    severity: 'Critical',
+    description: 'Conducted security testing that revealed multiple vulnerabilities affecting authentication, authorization, and API security. Submitted a comprehensive report with risk assessments and remediation guidance.',
     reward: '$300',
     image: jobportalImage
   },
   {
     platform: 'SAPA',
-    severity: 'Low',
-    date: '2023-08',
-    description: 'Reported sensitive data exposure in error messages and API responses.',
+    severity: 'Critical',
+    description: 'Reported security weaknesses involving session management and API access controls that could impact account security. Provided recommendations to improve authentication resilience and system security posture.',
     reward: '$200',
     image: sapaImage
   }
