@@ -27,7 +27,7 @@ export const navItems = [
 
 export const heroStats = [
   { label: 'Years of Experience', value: '3+' },
-  { label: 'Projects shipped', value: '6+' },
+  { label: 'Projects', value: '6+' },
   { label: 'Security reports', value: '8+' }
 ];
 
@@ -86,31 +86,31 @@ export const projects = [
 export const certificates = [
   {
     title: 'Python Programming',
-    issuer: 'CodeLibrarian',
+    issuer: 'CodeLiber',
     image: certificateOne,
     description: 'Completed a structured Python course focused on core programming and practical problem solving.'
   },
   {
     title: 'Advanced Cybersecurity',
-    issuer: 'ACES',
+    issuer: 'Aces Tagum College Inc.',
     image: certificateTwo,
     description: 'Explored secure systems, network defense basics, and threat analysis workflows.'
   },
   {
     title: 'Data Analysis Essentials',
-    issuer: 'Data Academy',
+    issuer: 'Cisco Networking Academy',
     image: certificateThree,
     description: 'Built a foundation in analysis techniques, reports, and interpreting datasets with clarity.'
   },
   {
     title: 'Python Essentials',
-    issuer: 'CodeLibrarian',
+    issuer: 'Cisco Networking Academy',
     image: certificateFour,
     description: 'Validated core Python skills with practical exercises and script-based problem solving.'
   },
   {
     title: 'Introduction to Cybersecurity',
-    issuer: 'Security Academy',
+    issuer: 'Cisco Networking Academy',
     image: certificateFive,
     description: 'Demonstrated understanding of threat analysis, secure practices, and system hardening fundamentals.'
   }

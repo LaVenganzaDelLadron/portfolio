@@ -29,6 +29,7 @@
 }
 
 html {
+  font-size: 20px;
   scroll-behavior: smooth;
   background: var(--bg);
   scrollbar-color: var(--accent) var(--bg);

@@ -33,7 +33,7 @@ export default function Background() {
             <Card className="about-bio">
               <p className="about-bio__eyebrow">Biography</p>
               <p>
-                I am a curious engineer who enjoys turning clear ideas into dependable digital products. My work spans modern frontends, API architecture, Linux environments, and security practices that keep systems resilient.
+                I am a curious engineer passionate about transforming ideas into reliable, high-quality digital products. My expertise spans modern API architecture, Linux environments, and penetration testing, enabling me to build secure, scalable systems while identifying and addressing vulnerabilities before they become risks. I combine a problem-solving mindset with a strong focus on performance, security, and maintainable design to create technology that users and organizations can depend on.
               </p>
               <div className="about-bio__note">
                 Focused on clarity, maintainability, and thoughtful detail in every build.
