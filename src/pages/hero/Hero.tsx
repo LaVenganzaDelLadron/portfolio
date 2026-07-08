@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="home" className="hero-section">
       <div className="hero-grid">
         <Reveal className="hero-copy">
-          <div className="hero-badge">Full Stack Developer • Cybersecurity Enthusiast</div>
+          <div className="hero-badge">Full Stack Developer • Security Researcher • Penetration Tester • Ethical Hacker</div>
           <h1>
             Hey, I&apos;m <span>Elton John Justaga</span>
           </h1>
