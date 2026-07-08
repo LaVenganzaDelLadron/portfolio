@@ -1,5 +1,4 @@
 import './Footer.css';
-import { socialLinks } from '../../data/content';
 
 export default function Footer() {
   return (
