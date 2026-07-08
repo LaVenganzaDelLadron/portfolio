@@ -11,7 +11,7 @@ export default function Hero() {
         <Reveal className="hero-copy">
           <div className="hero-badge">Full Stack Developer • Cybersecurity Enthusiast</div>
           <h1>
-            Hey, I&apos;m <span>Dark Glitch</span>
+            Hey, I&apos;m <span>Elton John Justaga</span>
           </h1>
           <p>
             I build polished digital products and resilient systems with a strong focus on user experience, scalable architecture, and secure engineering.
@@ -50,7 +50,7 @@ export default function Hero() {
               <div className="hero-card__panel">
                 <p className="hero-panel__eyebrow">Currently crafting</p>
                 <h3>Secure, modern products</h3>
-                <p>React • TypeScript • Node.js • Python</p>
+                <p>Python • Java • C\C++ • Lua</p>
               </div>
             </div>
           </div>

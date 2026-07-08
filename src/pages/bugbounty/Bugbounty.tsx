@@ -27,6 +27,7 @@ export default function Bugbounty() {
           {bugBountyReports.map((item) => (
             <Reveal key={item.platform}>
               <Card className="bounty-card">
+                <img src={item.image} alt={`${item.platform} logo`} className="bounty-card__image" />
                 <div className="bounty-card__main">
                   <div className="bounty-card__title-row">
                     <p className="bounty-card__platform">{item.platform}</p>

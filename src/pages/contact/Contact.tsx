@@ -22,11 +22,6 @@ export default function Contact() {
             I&apos;m available for freelance work, product builds, and security-minded collaborations. If you have a project in mind, reach out and I&apos;ll get back to you shortly.
           </p>
 
-          <div className="contact-details">
-            <a href="mailto:hello@darkglitch.dev">hello@darkglitch.dev</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">github.com/darkglitch</a>
-          </div>
-
           <div className="contact-socials">
             {socialLinks.map((link) => (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
