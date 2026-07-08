@@ -26,26 +26,26 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { label: 'Years building', value: '3+' },
-  { label: 'Projects shipped', value: '20+' },
-  { label: 'Security reports', value: '15+' }
+  { label: 'Years of Experience', value: '3+' },
+  { label: 'Projects shipped', value: '6+' },
+  { label: 'Security reports', value: '8+' }
 ];
 
 export const backgroundItems = [
   {
     title: 'Education',
-    date: '2021 — Present',
-    description: 'Studying computer science and software engineering with a focus on web systems, cybersecurity, and embedded applications.'
+    date: '2026 — Present',
+    description: 'Studying Information and Technology and focusing on cyber security.'
   },
   {
     title: 'Experience',
-    date: '2022 — Present',
-    description: 'Building full-stack products, automation tools, and security-conscious APIs for personal and freelance work.'
+    date: '2022-2026 — Present',
+    description: 'Building full stack products, automation tools, and enhance my cyber security skills.'
   },
   {
     title: 'Tech Stack',
     date: 'Always evolving',
-    description: 'React, TypeScript, Tailwind, FastAPI, Python, Java, Docker, Linux, and SQL are the core of my daily workflow.'
+    description: 'FastAPI, Python, Java, C\C++, Lua, Linux, and SQL are the core of my daily workflow.'
   }
 ];
 

@@ -26,6 +26,7 @@ export default function Certifcate() {
                   <div className="certificate-card__body">
                     <p className="certificate-card__title">{certificate.title}</p>
                     <p className="certificate-card__issuer">{certificate.issuer}</p>
+                    <p className="certificate-card__description">{certificate.description}</p>
                   </div>
                 </Card>
               </button>
