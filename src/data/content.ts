@@ -51,9 +51,9 @@ export const backgroundItems = [
 
 export const skills = [
   { category: 'Languages', items: [{ name: 'Python' }, { name: 'Java' }, { name: 'C\C++' }, { name: 'Lua' }] },
+  { category: 'Cyber Security', items: [{ name: 'Security Researcher' }, { name: 'Bugbounty Hunter' }, { name: 'Penetration Tester' }, { name: 'Ethical Hacker' }] },
   { category: 'Frameworks', items: [{ name: 'FastAPI' }, { name: 'Django' }, { name: 'Flask' }] },
   { category: 'Platform', items: [{ name: 'Linux' }] },
-  { category: 'Security', items: [{ name: 'Cybersecurity' }, { name: 'Bugbounty Hunter' }, { name: 'Penetration Tester' }, { name: 'Ethical Hacker' }] }
 ];
 
 export const projects = [
