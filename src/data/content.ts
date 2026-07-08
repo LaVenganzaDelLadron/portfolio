@@ -53,7 +53,7 @@ export const skills = [
   { category: 'Languages', items: [{ name: 'Python' }, { name: 'Java' }, { name: 'C\C++' }, { name: 'Lua' }] },
   { category: 'Frameworks', items: [{ name: 'FastAPI' }, { name: 'Django' }, { name: 'Flask' }] },
   { category: 'Platform', items: [{ name: 'Linux' }] },
-  { category: 'Security', items: [{ name: 'Cybersecurity' }] }
+  { category: 'Security', items: [{ name: 'Cybersecurity' }, { name: 'Bugbounty Hunter' }, { name: 'Penetration Tester' }, { name: 'Ethical Hacker' }] }
 ];
 
 export const projects = [
