@@ -24,9 +24,15 @@ export default function Contact() {
 
           <div className="contact-socials">
             {socialLinks.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-                {link.label}
-              </a>
+              'text' in link ? (
+                <span key={link.label} className="contact-social-text">
+                  {link.text}
+                </span>
+              ) : (
+                <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
         </Reveal>

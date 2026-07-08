@@ -1,6 +1,6 @@
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   align-items: start;
 }
@@ -40,8 +40,17 @@
   border-color: var(--accent-soft);
 }
 
+.contact-social-text {
+  padding: 0.68rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  display: inline-block;
+}
+
 .contact-form-panel {
   width: 100%;
+  display: none;
 }
 
 .contact-form {
