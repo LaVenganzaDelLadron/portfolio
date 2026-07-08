@@ -3,6 +3,7 @@ import Card from '../../components/Card/Card';
 import Reveal from '../../components/Reveal/Reveal';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import { bugBountyReports } from '../../data/content';
+import securityReportImage from '../../assets/images/bugbounty/security-report.svg';
 
 export default function Bugbounty() {
   return (
@@ -13,6 +14,14 @@ export default function Bugbounty() {
           title="Security reports and responsible disclosure"
           description="A short timeline of findings and the impact they helped improve."
         />
+
+        <div className="bounty-hero">
+          <img
+            src={securityReportImage}
+            alt="Security reports and responsible disclosure illustration"
+            className="bounty-hero__image"
+          />
+        </div>
 
         <div className="bounty-list">
           {bugBountyReports.map((item) => (

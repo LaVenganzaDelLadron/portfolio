@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none">
+  <rect width="720" height="520" rx="40" fill="#ffffff" stroke="#d1d5db" stroke-width="4"/>
+  <rect x="80" y="80" width="560" height="360" rx="28" fill="#f8fafc" stroke="#e5e7eb" stroke-width="3"/>
+  <path d="M140 150h180v14H140zM140 192h300v14H140zM140 234h220v14H140zM140 276h320v14H140zM140 318h240v14H140z" fill="#d1d5db"/>
+  <rect x="460" y="150" width="140" height="120" rx="16" fill="#e0f2fe"/>
+  <path d="M499 166c-19 0-34 15-34 34v44h14v-44c0-11 9-19 20-19s20 8 20 19v44h14v-44c0-19-15-34-34-34Z" fill="#0ea5e9"/>
+  <path d="M520 220c0 17-14 30-30 30s-30-13-30-30 14-30 30-30 30 13 30 30Z" fill="#0ea5e9" opacity="0.22"/>
+  <path d="M258 404h204v14H258z" fill="#d1d5db"/>
+  <path d="M418 180h36v80h-36z" fill="#0ea5e9" opacity="0.3"/>
+  <path d="M380 170h36v90h-36z" fill="#0ea5e9" opacity="0.5"/>
+  <path d="M340 190h36v70h-36z" fill="#0ea5e9"/>
+  <text x="120" y="116" fill="#111827" font-family="Poppins, sans-serif" font-size="32" font-weight="700">Report</text>
+</svg>

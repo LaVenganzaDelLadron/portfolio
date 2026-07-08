@@ -1,6 +1,6 @@
 .section-title {
   max-width: 720px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .section-title--centered {
@@ -11,7 +11,7 @@
 
 .section-title__eyebrow {
   margin: 0 0 0.65rem;
-  color: var(--primary);
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.24em;

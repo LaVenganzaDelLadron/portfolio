@@ -3,8 +3,8 @@
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--border);
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(16px);
+  background: rgba(248, 248, 248, 0.92);
+  backdrop-filter: blur(10px);
 }
 
 .navbar__inner {
@@ -17,11 +17,11 @@
 }
 
 .navbar__brand {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .navbar__links {
@@ -33,12 +33,12 @@
 .navbar__link {
   color: var(--text-muted);
   font-size: 0.95rem;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .navbar__link:hover,
 .navbar__link:focus-visible {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .navbar__toggle {

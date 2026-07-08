@@ -4,6 +4,8 @@ import projectTwo from '../assets/images/project/hades.jpeg';
 import certificateOne from '../assets/images/certificate/codeliber_python_cert.png';
 import certificateTwo from '../assets/images/certificate/aces_cert.png';
 import certificateThree from '../assets/images/certificate/data_analysis_cert.png';
+import certificateFour from '../assets/images/certificate/python-essentials.png';
+import certificateFive from '../assets/images/certificate/introduction-to-cybersecurity.png';
 
 export const navItems = [
   { label: 'Home', href: '#home' },
@@ -93,6 +95,18 @@ export const certificates = [
     issuer: 'Data Academy',
     image: certificateThree,
     description: 'Built a foundation in analysis techniques, reports, and interpreting datasets with clarity.'
+  },
+  {
+    title: 'Python Essentials',
+    issuer: 'CodeLibrarian',
+    image: certificateFour,
+    description: 'Validated core Python skills with practical exercises and script-based problem solving.'
+  },
+  {
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Security Academy',
+    image: certificateFive,
+    description: 'Demonstrated understanding of threat analysis, secure practices, and system hardening fundamentals.'
   }
 ];
 
