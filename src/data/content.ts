@@ -59,7 +59,7 @@ export const skills = [
 export const projects = [
   {
     title: 'CodeGo',
-    description: 'A type of script of python to understand the command execution through network and the system.',
+    description: 'A Python-based networking project designed to demonstrate remote command execution concepts, client-server communication, and system interaction in controlled environments.',
     image: projectOne,
     tech: ['Python'],
     github: 'https://github.com/LaVenganzaDelLadron/reverseShell.git',
@@ -67,17 +67,17 @@ export const projects = [
   },
   {
     title: 'Hades Eye',
-    description: 'A polished portfolio and content platform designed with a minimal visual language and fast interactions.',
+    description: 'An Android security application that analyzes files and URLs for potential threats by integrating malware intelligence services such as VirusTotal and Hybrid Analysis.',
     image: projectTwo,
-    tech: ['Python', 'Kotlin', 'Chaquopy'],
+    tech: ['Python', 'Kotlin', 'Chaquopy', 'VirusTotal API', 'Hybrid Analysis'],
     github: 'https://github.com/LaVenganzaDelLadron/HadesEye.git',
     demo: 'https://example.com'
   },
   {
     title: 'darkglitch',
-    description: 'A kind of custom personal malware project that can spy on a system, exfiltrate data, and perform remote commands. Built for educational purposes.',
+    description: 'A proof-of-concept remote administration and security research tool built with WebRTC, enabling secure remote communication, command execution, file transfer, and system management for authorized testing environments.',
     image: projectThree,
-    tech: ['webrtc', 'aiortc', 'Python'],
+    tech: ['WebRTC', 'aiortc', 'Python'],
     github: 'https://github.com/LaVenganzaDelLadron/darkglitch.git',
     demo: 'https://example.com'
   }
