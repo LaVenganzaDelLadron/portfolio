@@ -4,24 +4,24 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.65;
   font-weight: 400;
-  color: #111827;
-  background-color: #f8fafc;
+  color: #e0e7ff;
+  background-color: #0f172a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color-scheme: light;
-  --bg: #f8fafc;
-  --bg-alt: #ffffff;
-  --card: #ffffff;
-  --primary: #111827;
-  --secondary: #52525b;
-  --accent: #2563eb;
-  --text: #111827;
-  --text-muted: #6b7280;
-  --border: rgba(17, 24, 39, 0.12);
-  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-  --accent-soft: rgba(37, 99, 235, 0.08);
+  color-scheme: dark;
+  --bg: #0f172a;
+  --bg-alt: #1a1f35;
+  --card: #131b2f;
+  --primary: #e0e7ff;
+  --secondary: #a5b4fc;
+  --accent: #818cf8;
+  --text: #e0e7ff;
+  --text-muted: #9ca3af;
+  --border: rgba(229, 231, 235, 0.08);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --accent-soft: rgba(129, 140, 248, 0.12);
 }
 
 * {
@@ -31,6 +31,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  scrollbar-color: var(--accent) var(--bg);
+  scrollbar-width: thin;
 }
 
 body {
@@ -64,6 +66,6 @@ textarea {
 }
 
 ::selection {
-  background: var(--accent-soft);
-  color: var(--text);
+  background: var(--accent);
+  color: var(--bg);
 }

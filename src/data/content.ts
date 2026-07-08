@@ -50,10 +50,10 @@ export const backgroundItems = [
 ];
 
 export const skills = [
-  { category: 'Backend', items: [{ name: 'Node.js', level: 84 }, { name: 'FastAPI', level: 86 }, { name: 'SQL', level: 80 }] },
-  { category: 'Languages', items: [{ name: 'Python', level: 90 }, { name: 'Java', level: 82 }, { name: 'C++', level: 78 }] },
-  { category: 'Platform', items: [{ name: 'Docker', level: 84 }, { name: 'Linux', level: 90 }, { name: 'Git', level: 92 }] },
-  { category: 'Security', items: [{ name: 'Cybersecurity', level: 88 }] }
+  { category: 'Languages', items: [{ name: 'Python' }, { name: 'Java' }, { name: 'C\C++' }, { name: 'Lua' }] },
+  { category: 'Frameworks', items: [{ name: 'FastAPI' }, { name: 'Django' }, { name: 'Flask' }] },
+  { category: 'Platform', items: [{ name: 'Linux' }] },
+  { category: 'Security', items: [{ name: 'Cybersecurity' }] }
 ];
 
 export const projects = [

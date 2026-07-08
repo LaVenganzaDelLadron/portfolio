@@ -25,7 +25,6 @@ export default function Bugbounty() {
                     <span className="bounty-card__severity">{item.severity}</span>
                   </div>
                   <p className="bounty-card__description">{item.description}</p>
-                  <div className="bounty-card__reward">Reward {item.reward}</div>
                 </div>
               </Card>
             </Reveal>

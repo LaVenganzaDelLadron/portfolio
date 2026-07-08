@@ -23,13 +23,7 @@ export default function Skill() {
                 <div className="skill-list">
                   {group.items.map((item) => (
                     <div key={item.name} className="skill-item">
-                      <div className="skill-item__meta">
-                        <span>{item.name}</span>
-                        <span>{item.level}%</span>
-                      </div>
-                      <div className="skill-bar">
-                        <div className="skill-bar__fill" style={{ width: `${item.level}%` }} />
-                      </div>
+                      <span>{item.name}</span>
                     </div>
                   ))}
                 </div>

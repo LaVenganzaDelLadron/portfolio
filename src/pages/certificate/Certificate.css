@@ -16,12 +16,20 @@
 .certificate-card {
   overflow: hidden;
   padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  background: var(--card);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 0.75rem;
+  background: rgba(19, 27, 47, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+  border-color: rgba(129, 140, 248, 0.4);
+  background: rgba(19, 27, 47, 0.5);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .certificate-card:hover {
@@ -57,7 +65,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(17, 24, 39, 0.8);
+  background: rgba(15, 23, 42, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,11 +76,13 @@
 
 .modal-card {
   width: min(100%, 780px);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 1.2rem;
+  background: rgba(19, 27, 47, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .modal-card__header {
