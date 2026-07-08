@@ -26,8 +26,8 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { label: 'Years of Experience', value: '3+' },
-  { label: 'Projects', value: '6+' },
+  { label: 'Years of Experience', value: '4+' },
+  { label: 'Projects', value: '20+' },
   { label: 'Security reports', value: '8+' }
 ];
 
