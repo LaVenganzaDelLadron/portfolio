@@ -18,10 +18,133 @@
   text-transform: uppercase;
 }
 
+.section-title {
+  position: relative;
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.section-title--centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Small label */
+.section-title__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0 0 1rem;
+
+  color: #4da3ff;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.section-title__eyebrow::before {
+  content: '';
+
+  width: 40px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #0084ff
+  );
+
+  box-shadow:
+    0 0 10px rgba(0, 132, 255, 0.8);
+}
+
+.section-title__eyebrow::after {
+  content: '';
+
+  width: 40px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #0084ff,
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px rgba(0, 132, 255, 0.8);
+}
+
+/* Main heading */
 .section-title h2 {
-  margin: 0 0 0.8rem;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  color: var(--text);
+  margin: 0 0 1rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #4da3ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 0 25px rgba(0, 132, 255, 0.15);
+}
+
+/* Description */
+.section-title p:last-child {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  max-width: 650px;
+}
+
+.section-title--centered p:last-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Decorative glow line */
+.section-title::after {
+  content: '';
+
+  display: block;
+
+  width: 80px;
+  height: 3px;
+
+  margin-top: 1.5rem;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #0084ff,
+    #4da3ff
+  );
+
+  box-shadow:
+    0 0 10px rgba(0, 132, 255, 0.8),
+    0 0 25px rgba(0, 132, 255, 0.4);
+}
+
+.section-title--centered::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title p {

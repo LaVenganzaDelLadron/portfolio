@@ -7,5 +7,9 @@ type CardProps = {
 };
 
 export default function Card({ children, className = '' }: CardProps) {
-  return <div className={`card ${className}`.trim()}>{children}</div>;
+  return (
+    <div className={`card ${className}`.trim()}>
+      {children}
+    </div>
+  );
 }

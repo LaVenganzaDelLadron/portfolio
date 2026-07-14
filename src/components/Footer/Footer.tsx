@@ -5,8 +5,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div>
-          <p className="footer__title">Elton John Justaga</p>
-          <p className="footer__copy">© 2026. Crafted with React, TypeScript, and thoughtful design.</p>
+          <p className="footer__title">DarkGlitch</p>
+          <p className="footer__copy">Ethical Hacker • Security Researcher • Developer
+          </p>
         </div>
 
         

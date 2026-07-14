@@ -11,7 +11,7 @@ export default function Skill() {
         <SectionTitle
           eyebrow="Skills"
           title="A practical stack for modern products"
-          description="My toolkit blends interface design, backend systems, automation, and security practices that support fast and reliable development."
+          description="My toolkit blends backend systems, automation, and security practices that support fast and reliable development."
           centered
         />
 
