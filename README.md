@@ -2,6 +2,16 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Chatbot setup
+
+The chatbot uses Groq's Responses API with `openai/gpt-oss-20b`. Its server-side endpoint is [api/chat.js](api/chat.js), designed for a Vercel deployment so the API key is never sent to the browser.
+
+1. Copy `.env.example` to `.env`.
+2. Set `GROQ_API_KEY` to a Groq API key.
+3. Deploy the project to Vercel and add the same `GROQ_API_KEY` environment variable in the Vercel project settings.
+
+`npm run dev` includes a development-only `/api/chat` bridge, so the chatbot works locally using the key in `.env`. Vercel automatically uses [api/chat.js](api/chat.js) in production.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
