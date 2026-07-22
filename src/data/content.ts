@@ -1,6 +1,8 @@
 import projectOne from '../assets/images/project/codego.png';
 import projectTwo from '../assets/images/project/hades.jpeg';
 import projectThree from '../assets/images/project/darkglitch.png';
+import projectFour from '../assets/images/project/glitch-assistant.png';
+import projectFive from '../assets/images/project/glitch-recon.png';
 import certificateOne from '../assets/images/certificate/codeliber_python_cert.png';
 import certificateTwo from '../assets/images/certificate/aces_cert.png';
 import certificateThree from '../assets/images/certificate/data_analysis_cert.png';
@@ -80,7 +82,25 @@ export const projects = [
     tech: ['WebRTC', 'aiortc', 'Python'],
     github: 'https://github.com/LaVenganzaDelLadron/darkglitch.git',
     demo: 'https://example.com'
-  }
+  },
+  {
+    title: 'glitch assistant',
+    description: "An extensible, AI-powered command-line and web assistant for software engineering and cybersecurity. Built on Groq's LLM API with a modular pipeline architecture, intent routing, tool-calling capabilities, and token-aware context management.",
+    image: projectFour,
+    tech: ['Python', 'AI Pipeline'],
+    github: 'https://github.com/LaVenganzaDelLadron/glitch-assistant.git',
+    demo: 'https://example.com'
+  },
+  {
+    title: 'GlitchRecon',
+    description: "Evidence-driven web security scanner — automated scanners collect raw evidence, then AI explains, prioritises, and recommends fixes.\n" +
+        "\n" +
+        "GlitchRecon runs a battery of passive and active security checks (XSS, SQLi, CSRF, SSRF, IDOR, security headers, cookie analysis, TLS fingerprinting, and more) against a target web application. Every finding is backed by scanner-captured evidence. An LLM (Groq or Ollama) is used only to generate human-readable summaries, risk scoring, and remediation guidance — it never hallucinates findings.",
+    image: projectFive,
+    tech: ['Python', 'AI Pipeline'],
+    github: 'https://github.com/LaVenganzaDelLadron/GlitchRecon.git',
+    demo: 'https://example.com'
+  },
 ];
 
 export const certificates = [
