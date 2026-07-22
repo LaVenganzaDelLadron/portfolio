@@ -55,10 +55,10 @@ export default function Chatbot() {
   return (
     <aside className="chatbot" aria-label="Chat assistant">
       {open ? (
-        <section className="chatbot__panel" aria-label="Elton John's AI assistant">
+        <section className="chatbot__panel" aria-label="Dark Glitch's Chatbot assistant">
           <div className="chatbot__header">
             <div>
-              <p className="chatbot__eyebrow">Elton John's assistant</p>
+              <p className="chatbot__eyebrow">Dark Glitch's assistant</p>
               <p className="chatbot__subtitle">Ask about his profile or projects.</p>
             </div>
           <button
