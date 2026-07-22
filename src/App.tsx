@@ -8,6 +8,7 @@ import Project from './pages/project/Project';
 import Certifcate from './pages/certificate/Certifcate';
 import Bugbounty from './pages/bugbounty/Bugbounty';
 import Contact from './pages/contact/Contact';
+import Chatbot from './components/Chatbot/Chatbot';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
