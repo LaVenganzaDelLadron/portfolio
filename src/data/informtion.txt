@@ -196,6 +196,35 @@ before they can be exploited, promoting secure software development
 practices, and contributing to a safer digital ecosystem through collaboration, continuous learning, and 
 responsible security research.
 
+---
+
+Elton John Justaga is committed to continuous learning and professional development through recognized 
+training programs and industry certifications. His certifications reflect a strong foundation in 
+**software development, cybersecurity, and data analysis**, demonstrating his dedication to expanding 
+both theoretical knowledge and practical expertise. He completed **Python Programming** through **CodeLiber**, 
+where he gained comprehensive experience in Python fundamentals, object-oriented programming, algorithms, 
+data structures, debugging, and practical software development. He also earned an **Advanced Cybersecurity** 
+certification from **Aces Tagum College Inc.**, strengthening his understanding of network security, threat 
+analysis, risk assessment, secure system design, and modern cybersecurity practices.
+
+To further enhance his technical skills, Elton completed **Data Analysis Essentials** through 
+**Cisco Networking Academy**, developing the ability to interpret datasets, generate meaningful 
+reports, apply analytical techniques, and support data-driven decision making. He also obtained the 
+**Python Essentials** certification from **Cisco Networking Academy**, validating his proficiency in 
+Python programming, automation, scripting, functions, modules, file handling, and problem-solving through 
+practical coding exercises. Additionally, he completed **Introduction to Cybersecurity**, also offered by 
+**Cisco Networking Academy**, where he built a solid understanding of cybersecurity fundamentals, cyber 
+threats, malware, network defense, digital privacy, security technologies, and industry best practices for 
+protecting information systems.
+
+These certifications represent Elton's ongoing commitment to lifelong learning and professional growth. 
+By combining structured education with hands-on development, cybersecurity research, penetration testing, 
+and real-world projects, he continuously strengthens his expertise in secure software engineering, 
+backend development, Linux environments, API security, automation, and ethical hacking. His approach to 
+learning extends beyond earning certificates, focusing on applying acquired knowledge to build secure, 
+scalable, and reliable technologies while contributing to the cybersecurity community through research 
+and responsible vulnerability disclosure.
+
 
 --
 Contact
