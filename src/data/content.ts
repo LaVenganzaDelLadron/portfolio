@@ -91,10 +91,10 @@ export const certificates = [
     description: 'Completed a structured Python course focused on core programming and practical problem solving.'
   },
   {
-    title: 'Advanced Cybersecurity',
+    title: 'Programmer of the Year',
     issuer: 'Aces Tagum College Inc.',
     image: certificateTwo,
-    description: 'Explored secure systems, network defense basics, and threat analysis workflows.'
+    description: 'I got a certification of Programmer of the Year of my College University.'
   },
   {
     title: 'Data Analysis Essentials',

@@ -198,32 +198,46 @@ responsible security research.
 
 ---
 
-Elton John Justaga is committed to continuous learning and professional development through recognized 
-training programs and industry certifications. His certifications reflect a strong foundation in 
-**software development, cybersecurity, and data analysis**, demonstrating his dedication to expanding 
-both theoretical knowledge and practical expertise. He completed **Python Programming** through **CodeLiber**, 
-where he gained comprehensive experience in Python fundamentals, object-oriented programming, algorithms, 
-data structures, debugging, and practical software development. He also earned an **Advanced Cybersecurity** 
-certification from **Aces Tagum College Inc.**, strengthening his understanding of network security, threat 
-analysis, risk assessment, secure system design, and modern cybersecurity practices.
+Python Programming
+Issuer: CodeLiber
 
-To further enhance his technical skills, Elton completed **Data Analysis Essentials** through 
-**Cisco Networking Academy**, developing the ability to interpret datasets, generate meaningful 
-reports, apply analytical techniques, and support data-driven decision making. He also obtained the 
-**Python Essentials** certification from **Cisco Networking Academy**, validating his proficiency in 
-Python programming, automation, scripting, functions, modules, file handling, and problem-solving through 
-practical coding exercises. Additionally, he completed **Introduction to Cybersecurity**, also offered by 
-**Cisco Networking Academy**, where he built a solid understanding of cybersecurity fundamentals, cyber 
-threats, malware, network defense, digital privacy, security technologies, and industry best practices for 
-protecting information systems.
+Completed a comprehensive Python programming course that covered core programming concepts, 
+object-oriented programming, algorithms, data structures, file handling, debugging, and practical 
+software development. The course strengthened my problem-solving skills through hands-on coding 
+exercises and real-world projects, providing a solid foundation for developing reliable and 
+maintainable software applications.
 
-These certifications represent Elton's ongoing commitment to lifelong learning and professional growth. 
-By combining structured education with hands-on development, cybersecurity research, penetration testing, 
-and real-world projects, he continuously strengthens his expertise in secure software engineering, 
-backend development, Linux environments, API security, automation, and ethical hacking. His approach to 
-learning extends beyond earning certificates, focusing on applying acquired knowledge to build secure, 
-scalable, and reliable technologies while contributing to the cybersecurity community through research 
-and responsible vulnerability disclosure.
+Programmer of the Year
+Issuer: Aces Tagum College Inc.
+
+Awarded the Programmer of the Year recognition for demonstrating exceptional programming ability, 
+technical excellence, academic performance, and dedication to software development. This award 
+recognizes my commitment to continuous learning, innovation, leadership, and the consistent 
+application of programming skills to academic and personal projects.
+
+Data Analysis Essentials
+Issuer: Cisco Networking Academy
+
+Successfully completed a foundational course in data analysis that introduced essential techniques 
+for collecting, organizing, analyzing, and interpreting data. The course emphasized data-driven 
+decision making, report generation, visualization, and extracting meaningful insights from 
+structured datasets.
+
+Python Essentials
+Issuer: Cisco Networking Academy
+
+Completed the Python Essentials certification, validating my knowledge of Python programming 
+fundamentals including variables, control structures, functions, modules, exception handling, 
+object-oriented programming, and scripting. Through practical exercises and assessments, 
+I strengthened my ability to develop efficient, maintainable, and scalable Python applications.
+
+Introduction to Cybersecurity
+Issuer: Cisco Networking Academy
+
+Completed Cisco's Introduction to Cybersecurity course, gaining a strong understanding of cybersecurity 
+principles, common cyber threats, attack vectors, risk management, network security, system hardening, 
+and security best practices. The certification reinforced the importance of protecting digital assets 
+through proactive defense strategies and secure computing practices.
 
 
 --
