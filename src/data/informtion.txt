@@ -1,0 +1,205 @@
+### Elton John Justaga (DarkGlitch)
+
+Elton John Justaga, also known as **DarkGlitch**, is a software developer, ethical hacker, bug bounty hunter, 
+penetration tester, and cybersecurity researcher. He is passionate about building secure, scalable, and 
+high-quality software while continuously exploring how computer systems, operating systems, networks, and 
+security mechanisms work at a deeper level.
+
+He is currently pursuing a degree in Information Technology, specializing in Cybersecurity, and has 
+more than four years of experience developing software, automation tools, backend systems, and 
+security-focused applications. Throughout his journey, he has completed over 20 projects and responsibly 
+disclosed multiple security vulnerabilities that helped organizations strengthen their security posture.
+
+His expertise spans Python, Java, C/C++, Lua, FastAPI, Django, Flask, Linux, SQL, API development, 
+automation, penetration testing, vulnerability assessment, and security research**. He enjoys designing 
+clean software architectures, developing reliable backend services, and creating tools that improve 
+productivity while maintaining security as a core principle.
+
+Elton has developed several notable projects, including **GlitchRecon**, an AI-powered 
+cybersecurity platform that integrates multiple large language models to automate security 
+analysis and vulnerability assessment; **CodeGo**, a networking project demonstrating client-server 
+communication and remote command execution concepts within controlled environments; Hades Eye, 
+an Android security application that analyzes files and URLs using malware intelligence services such 
+as VirusTotal and Hybrid Analysis; and **darkglitch**, a proof-of-concept remote administration and 
+security research framework utilizing WebRTC for secure communication, file transfer, and authorized 
+system management.
+
+As an active bug bounty hunter and security researcher, 
+he performs responsible security testing against web applications and APIs, 
+discovering vulnerabilities related to authentication, authorization, access control, 
+session management, API security, and information disclosure. His findings have contributed 
+to improving the security of educational institutions, organizational platforms, and enterprise 
+systems through responsible disclosure and remediation recommendations.
+
+Beyond software engineering and cybersecurity, Elton is deeply interested in understanding 
+how computers work internally. He enjoys studying operating systems, networking, memory management, 
+low-level programming, exploit development, reverse engineering, 
+and the interaction between hardware and software. He builds educational tools 
+and exploit simulations to better understand system behavior and to advance his cybersecurity 
+research in ethical and controlled environments.
+
+His long-term goal is to combine artificial intelligence, systems programming, and cybersecurity
+to create intelligent tools that assist security professionals, automate vulnerability discovery, 
+simulate attack techniques for defensive learning, and help organizations build more resilient systems. 
+He believes that secure software begins with a deep understanding of computer science fundamentals, 
+thoughtful engineering, and continuous learning.
+
+
+
+## Bug Bounty & Responsible Disclosure
+
+As an active **bug bounty hunter** and **cybersecurity researcher**, I perform authorized security assessments 
+on web applications, APIs, and enterprise systems to identify vulnerabilities before they can be exploited by 
+malicious actors. My research focuses on discovering security weaknesses that affect authentication, 
+authorization, access control, session management, API security, and sensitive data exposure. Every finding 
+is handled through a **responsible disclosure process**, ensuring that affected organizations receive detailed 
+technical reports, proof-of-concept demonstrations when appropriate, risk assessments, and practical 
+remediation recommendations to improve their security posture.
+
+Over the years, I have reported vulnerabilities ranging from **Medium** to **Critical** severity, helping 
+organizations strengthen their applications, protect sensitive information, and reduce potential attack 
+surfaces.
+
+Ad Astra — Medium Severity
+
+During an assessment of the **Ad Astra** platform, I identified an **authorization vulnerability** 
+within an administrative workflow that allowed users to access student records beyond their intended
+permission level. The issue resulted from insufficient server-side authorization checks, creating 
+the possibility of unauthorized access to academic information.
+
+A detailed report was submitted through responsible disclosure, outlining the affected functionality, 
+the potential business impact, and recommendations for implementing proper role-based access control 
+(RBAC), object-level authorization checks, and comprehensive permission validation. The organization 
+acknowledged the issue and implemented corrective improvements to strengthen access control mechanisms.
+
+---
+
+JP Connect — Medium Severity
+
+While testing the **JP Connect** platform, I discovered multiple **improper access control** weaknesses 
+affecting both academic and administrative resources. Certain endpoints allowed unauthorized users to 
+access information that should have been restricted based on user roles and permissions.
+
+The exposed information included student disciplinary records, scheduling data, and administrative 
+resources that required stronger authorization enforcement.
+
+A comprehensive vulnerability report was submitted with detailed reproduction steps, risk analysis, 
+and remediation guidance. Recommendations included implementing centralized authorization middleware, 
+validating ownership of requested resources, and enforcing least-privilege access throughout the application.
+
+---
+
+WEMIS — Critical Severity
+
+Security research conducted against the **WEMIS** platform revealed several **critical vulnerabilities** 
+involving **session management** and **API security** that had the potential to compromise the confidentiality 
+and integrity of user information.
+
+The assessment identified weaknesses in authentication workflows, session handling, and API endpoint protection 
+that could have enabled unauthorized access under certain conditions.
+
+The responsible disclosure report included technical analysis, impact assessment, 
+and recommendations covering secure session lifecycle management, improved token validation, stronger 
+authentication mechanisms, enhanced API authorization, and security monitoring. These findings assisted the 
+organization in prioritizing remediation efforts to improve overall platform security.
+
+---
+
+DOLE Job Fair — High Severity
+
+During security testing of the **DOLE Job Fair** platform, I identified **information disclosure 
+vulnerabilities** within authentication-related processes. Improper error handling 
+exposed internal application details that could assist attackers in gathering information about backend 
+infrastructure and authentication workflows.
+
+Although the disclosed information did not directly expose sensitive user data, it increased the 
+application's attack surface by revealing implementation details that could facilitate targeted attacks.
+
+The vulnerability report recommended implementing standardized error responses, removing unnecessary 
+debug information, improving exception handling, and following secure error management practices consistent 
+with industry standards such as the OWASP Application Security Verification Standard (ASVS).
+
+---
+
+EMIS — High Severity
+
+My assessment of the **EMIS** platform uncovered **API security weaknesses** that could allow unauthorized 
+access to sensitive user information through insufficient authorization controls.
+
+The identified issues demonstrated the importance of validating every request on the server side rather 
+than relying solely on client-side restrictions.
+
+The submitted report contained detailed reproduction steps, affected endpoints, business impact analysis, 
+and recommendations to strengthen authorization checks, implement object-level access control, improve API 
+security testing, and increase monitoring for unauthorized access attempts.
+
+---
+
+HRIS — High Severity
+
+Security testing against the **HRIS** platform revealed **unauthorized access risks** 
+affecting employee-related API endpoints. Certain requests lacked sufficient authorization 
+validation, creating the possibility of accessing personnel information outside the intended 
+permission boundaries.
+
+The responsible disclosure report emphasized strengthening server-side authorization, validating 
+resource ownership, implementing granular role-based permissions, and conducting periodic security 
+reviews of all employee-facing APIs.
+
+These recommendations contributed to improving the protection of employee information and reducing 
+the likelihood of unauthorized data exposure.
+
+---
+
+Job Portal — Critical Severity
+
+A comprehensive security assessment of the **Job Portal** application identified multiple **critical 
+vulnerabilities** affecting authentication, authorization, and API security.
+
+The research revealed several weaknesses that, when combined, could significantly impact the 
+confidentiality, integrity, and availability of the platform. The findings highlighted the importance 
+of implementing defense-in-depth strategies and secure development practices across the application.
+
+The submitted technical report included detailed vulnerability descriptions, severity assessments, 
+proof-of-concept demonstrations where appropriate, risk prioritization, and remediation guidance 
+aligned with OWASP best practices. Recommendations focused on strengthening authentication mechanisms, 
+enforcing consistent authorization policies, securing API endpoints, validating user sessions, and 
+improving security monitoring.
+
+---
+
+SAPA — Critical Severity
+
+While evaluating the **SAPA** platform, I identified several **critical security weaknesses** involving 
+**session management** and **API access control** that could affect account security and user privacy.
+
+The assessment revealed opportunities to improve session validation, strengthen authorization enforcement, 
+and reduce the risk of unauthorized account access through enhanced authentication controls.
+
+A detailed responsible disclosure report was provided to the organization, including technical documentation, 
+impact analysis, reproduction procedures, and mitigation recommendations. Suggested improvements included 
+implementing secure session handling, enforcing strict access-control validation, strengthening authentication 
+resilience, and conducting periodic penetration testing to ensure continued security improvements.
+
+---
+
+Security Research Philosophy
+
+My approach to bug bounty hunting and vulnerability research extends beyond simply identifying security flaws. 
+I focus on understanding the underlying design decisions that contribute to vulnerabilities, analyzing how 
+attackers may exploit those weaknesses, and providing actionable recommendations 
+that enable organizations to build more secure systems.
+
+Every assessment is conducted ethically, within authorized scopes, and in accordance with responsible disclosure 
+principles. My objective is to help organizations strengthen their security posture by identifying vulnerabilities
+before they can be exploited, promoting secure software development 
+practices, and contributing to a safer digital ecosystem through collaboration, continuous learning, and 
+responsible security research.
+
+
+--
+Contact
+email: eltonofficial403@gmail.com
+phone: 09972977654, 09920311543
+facebook: https://web.facebook.com/elton.jhon.lape.justaga/
+instagram: https://www.instagram.com/ejay.justaga/
