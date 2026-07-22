@@ -13,8 +13,6 @@ const titles = [
 ];
 
 export default function Hero() {
-  const [openImage, setOpenImage] = useState(false);
-
   const [text, setText] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -114,7 +112,6 @@ export default function Hero() {
                   src={profileImage}
                   alt="Profile"
                   className="hero-profile-image"
-                  onClick={() => setOpenImage(true)}
                 />
 
                 <div className="hero-card__panel">
@@ -131,19 +128,6 @@ export default function Hero() {
           </Reveal>
         </div>
       </section>
-
-      {openImage && (
-        <div
-          className="hero-image-modal"
-          onClick={() => setOpenImage(false)}
-        >
-          <img
-            src={profileImage}
-            alt="Full Profile"
-            className="hero-image-modal__img"
-          />
-        </div>
-      )}
     </>
   );
 }
