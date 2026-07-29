@@ -41,7 +41,7 @@ export const backgroundItems = [
   },
   {
     title: 'Experience',
-    date: '2022-2026 — Present',
+    date: '2022 — Present',
     description: 'Building full stack products, automation tools, and enhance my cyber security skills.'
   },
   {
