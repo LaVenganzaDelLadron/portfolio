@@ -8,6 +8,7 @@ import certificateTwo from '../assets/images/certificate/aces_cert.png';
 import certificateThree from '../assets/images/certificate/data_analysis_cert.png';
 import certificateFour from '../assets/images/certificate/python-essentials.png';
 import certificateFive from '../assets/images/certificate/introduction-to-cybersecurity.png';
+import certificateSix from '../assets/images/certificate/palo_alto.png';
 import adAstraImage from '../assets/images/bugbounty/adastra.png';
 import jpConnectImage from '../assets/images/bugbounty/jpconnect.png';
 import wemisImage from '../assets/images/bugbounty/wemis.png';
@@ -133,7 +134,13 @@ export const certificates = [
     issuer: 'Cisco Networking Academy',
     image: certificateFive,
     description: 'Demonstrated understanding of threat analysis, secure practices, and system hardening fundamentals.'
-  }
+  },
+  {
+    title: 'Security Operations Fundamentals',
+    issuer: 'Palo Alto Networks',
+    image: certificateSix,
+    description: 'Demonstrated understanding of security operations, incident response, and threat management principles in a cybersecurity context.'
+  },
 ];
 
 export const bugBountyReports = [
