@@ -25,7 +25,7 @@ export const navItems = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Certificates', href: '#certificates' },
-  { label: 'Pentest', href: '#pentest' },
+  { label: 'Pentest', href: '#bug-bounty' },
   { label: 'Contact', href: '#contact' }
 ];
 
