@@ -2,7 +2,7 @@ import './BugBounty.css';
 import Card from '../../components/Card/Card';
 import Reveal from '../../components/Reveal/Reveal';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import { bugBountyReports } from '../../data/content';
+import { pentest } from '../../data/content';
 
 export default function Bugbounty() {
   return (
@@ -15,7 +15,7 @@ export default function Bugbounty() {
         />
 
         <div className="bounty-grid">
-          {bugBountyReports.map((item) => (
+          {pentest.map((item) => (
             <Reveal key={item.platform}>
               <Card className="bounty-card">
                 <img src={item.image} alt={`${item.platform} logo`} className="bounty-card__image" />

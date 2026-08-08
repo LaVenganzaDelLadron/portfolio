@@ -150,7 +150,7 @@ export const certificates = [
   },
 ];
 
-export const bugBountyReports = [
+export const pentest = [
   {
     platform: 'Ad Astra',
     severity: 'Medium',
