@@ -9,6 +9,7 @@ import certificateThree from '../assets/images/certificate/data_analysis_cert.pn
 import certificateFour from '../assets/images/certificate/python-essentials.png';
 import certificateFive from '../assets/images/certificate/introduction-to-cybersecurity.png';
 import certificateSix from '../assets/images/certificate/palo_alto.png';
+import certificateSeven from '../assets/images/certificate/certificate-731.jpg';
 import adAstraImage from '../assets/images/bugbounty/adastra.png';
 import jpConnectImage from '../assets/images/bugbounty/jpconnect.png';
 import wemisImage from '../assets/images/bugbounty/wemis.png';
@@ -140,6 +141,12 @@ export const certificates = [
     issuer: 'Palo Alto Networks',
     image: certificateSix,
     description: 'Demonstrated understanding of security operations, incident response, and threat management principles in a cybersecurity context.'
+  },
+  {
+    title: 'Linux Course',
+    issuer: 'Technology Channel PVT. LTD.',
+    image: certificateSeven,
+    description: 'Conducted a Linux Course to understand the basic commands of the operating system.'
   },
 ];
 
