@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Hero.css';
 import Button from '../../components/Button/Button';
 import Reveal from '../../components/Reveal/Reveal';
-import profileImage from '../../assets/images/profile/profile.jpeg';
+import profileImage from '../../assets/images/profile/formal_profile.jpg';
 import { heroStats, socialLinks } from '../../data/content';
 
 const titles = [
