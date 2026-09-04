@@ -213,5 +213,5 @@ export const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/LaVenganzaDelLadron', icon: 'GH' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/elton-justaga-71373b342/', icon: 'in' },
   { label: 'Email', href: 'mailto:eltonofficial@gmail.com', icon: '@' },
-  { label: 'phone', text: '+639972977654', icon: 'phone' }
+  { label: 'phone', text: '+639920311543', icon: 'phone' }
 ];
